@@ -17,6 +17,12 @@
         font-weight: bold;
         margin-bottom: 20px;
     }
+    
+    #timeHeading {
+    font-size: 1.6rem;
+    color: #444;
+    margin-bottom: 20px;
+    }
 
     #activityHeading {
         font-size: 1.8rem;
@@ -28,57 +34,82 @@
 <body>
 
 <h1 id="dateHeading"></h1>
+<h2 id="timeHeading"></h2>
 <h2 id="activityHeading"></h2>
 
 <script>
     // One entry for each hour (0-23)
     const activities = [
-        "Midnight Reflection",
         "Sleep Time",
         "Sleep Time",
         "Sleep Time",
         "Sleep Time",
-        "Early Morning Stretch",
-        "Breakfast",
-        "Commute to Work",
-        "Morning Planning",
-        "Project Work",
-        "Brain Games at 10.00";Hand Therapy at 10.30",
+        "Sleep Time",
+        "Sleep Time",
+        "Sleep Time",
+        "Sleep Time",
+        "Get ready for Breakfast",
+        "Breakfast - Porridge, Egg and Toast",
+        "Brain Games at 10.00;Hand Therapy at 10.30",
         "Exercises at 11.00",
         "Go for Lunch if hungry",
         "Nap Time",
         "Nap Time",
         "Nap Time",
         "Get ready for Horlicks and biscuits;Karthik coming at 4.45pm",
-        "Commute Home",
-        "Exercise Session",
+        "Out and About",
+        "Pub Night",
         "Dinner",
-        "Family Time",
-        "Reading;Relaxation",
-        "Prepare for Tomorrow",
-        "Bedtime Routine"
+        "Get ready for bed",
+        "Sleep Time",
+        "Sleep Time",
+        "Sleep Time"
     ];
 
     function updateDisplay() {
         const now = new Date();
 
-        // First heading: date
+        // Date heading
         const weekday = now.toLocaleDateString('en-US', { weekday: 'long' });
         const month = now.toLocaleDateString('en-US', { month: 'long' });
         const day = now.getDate();
         const year = now.getFullYear();
 
         document.getElementById("dateHeading").textContent =
-            `Today is ${weekday} - ${month} ${day}, ${year}`;
+        `Today is ${weekday} - ${month} ${day}, ${year}`;
 
-        // Second heading: activity based on current hour
-        const hour = now.getHours(); // 0-23
+        // Time heading
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+
+        const timeString =
+            String(hour).padStart(2, '0') + ":" +
+            String(minute).padStart(2, '0');
+
+        let period;
+
+        if (hour >= 5 && hour < 12) {
+            period = "morning";
+            }
+        else if (hour >= 12 && hour < 16) {
+            period = "afternoon";
+            }
+        else if (hour >= 16 && hour < 20) {
+            period = "evening";
+            }
+        else {
+            period = "night";
+            }
+
+        document.getElementById("timeHeading").textContent =
+            `It is ${timeString} in the ${period}`;
+        
+        // Third heading: activity based on current hour
         const activity = activities[hour] || "No Activity Defined";
 
         // Split on ';' and display each segment on its own line
-        const lines = activity.split(';');
         document.getElementById("activityHeading").innerHTML =
-            lines.join("<br>");
+            activity.split(';').join('<br>');
     }
 
     // Initial display
@@ -87,6 +118,9 @@
     // Refresh every minute
     setInterval(updateDisplay, 60 * 1000);
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
