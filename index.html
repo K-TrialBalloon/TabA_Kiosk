@@ -10,23 +10,25 @@
         font-family: Arial, sans-serif;
         text-align: center;
         margin-top: 80px;
+        background-color: black;
     }
 
     #dateHeading {
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: bold;
         margin-bottom: 20px;
+        color: white;
     }
     
     #timeHeading {
-    font-size: 1.6rem;
-    color: #444;
+    font-size: 2.5rem;
+    color: blue;
     margin-bottom: 20px;
     }
 
     #activityHeading {
-        font-size: 1.8rem;
-        color: #0066cc;
+        font-size: 2rem;
+        color: yellow;
         line-height: 1.4;
     }
 </style>
@@ -82,8 +84,9 @@
         const hour = now.getHours();
         const minute = now.getMinutes();
 
+        const hour12 = hour % 12 || 12;
         const timeString =
-            String(hour).padStart(2, '0') + ":" +
+            String(hour12).padStart(2, '0') + ":" +
             String(minute).padStart(2, '0');
 
         let period;
@@ -118,9 +121,6 @@
     // Refresh every minute
     setInterval(updateDisplay, 60 * 1000);
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
