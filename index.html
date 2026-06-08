@@ -14,20 +14,20 @@
     }
 
     #dateHeading {
-        font-size: 4rem;
+        font-size: 4.5rem;
         font-weight: bold;
         margin-bottom: 20px;
         color: black;
     }
     
     #timeHeading {
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: black;
     margin-bottom: 20px;
     }
 
     #activityHeading {
-        font-size: 3.5rem;
+        font-size: 3rem;
         color: blue;
         line-height: 1.4;
     }
@@ -50,22 +50,22 @@
         "Sleep Time",
         "Sleep Time",
         "Sleep Time",
-        "Wake up. Its morning. Get ready for Breakfast",
-        "Go for Breakfast - Porridge, Egg and Toast",
-        "Activity - Brain Games at 10.00;Activity - Hand Therapy at 10.30",
-        "Activity - Exercises at 11.00",
-        "Are you hungry? Go for Lunch; Not hungry.Go back to bed",
+        "Wake up. Its morning. Get cleaned and dressed for Breakfast",
+        "Go for Breakfast - Ask for Porridge, Egg and Toast",
+        "Horse Racing at 10.30",
+        "No Activity scheduled",
+        "Are you hungry? Go for Lunch; Not hungry. Ring bell to be put back to bed",
         "Afternoon Nap",
         "Afternoon Nap",
         "Afternoon Nap",
-        "Wake up. Get ready for Horlicks and biscuits;Karthik coming at 4.45pm",
+        "Wake up. Get ready for Horlicks and snacks;Karthik coming at 4.45pm",
         "Out and About",
-        "Activity - Pub Night",
+        "Out and About",
         "Time for Dinner",
         "Get ready for bed",
-        "Sleep Time",
-        "Sleep Time",
-        "Sleep Time"
+        "Sleep Time. Goodnight",
+        "Sleep Time. Goodnight",
+        "Sleep Time. Goodnight"
     ];
 
     function updateDisplay() {
@@ -78,7 +78,7 @@
         const year = now.getFullYear();
 
         document.getElementById("dateHeading").textContent =
-        `Today is ${weekday} - ${month} ${day}, ${year}`;
+        `${weekday} - ${month} ${day}, ${year}`;
 
         // Time heading
         const hour = now.getHours();
@@ -86,7 +86,7 @@
 
         const hour12 = hour % 12 || 12;
         const timeString =
-            String(hour12).padStart(2, '0') + ":" +
+            String(hour12) + ":" +
             String(minute).padStart(2, '0');
 
         let period;
@@ -105,7 +105,7 @@
             }
 
         document.getElementById("timeHeading").textContent =
-            `It is ${timeString} in the ${period}`;
+            `${timeString} in the ${period}`;
         
         // Third heading: activity based on current hour
         const activity = activities[hour] || "No Activity Defined";
