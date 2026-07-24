@@ -1,126 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hourly Activity Display</title>
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 80px;
-        background-color: white;
-    }
+    <meta charset="UTF-8">
 
-    #dateHeading {
-        font-size: 4.5rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-        color: black;
-    }
-    
-    #timeHeading {
-    font-size: 4.5rem;
-    color: black;
-    margin-bottom: 20px;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    #activityHeading {
-        font-size: 3rem;
-        color: blue;
-        line-height: 1.4;
-    }
-</style>
+    <title>Daily Activity Display</title>
+
+    <link rel="stylesheet" href="styles.css">
+
 </head>
+
+
 <body>
 
-<h1 id="dateHeading"></h1>
-<h2 id="timeHeading"></h2>
-<h2 id="activityHeading"></h2>
 
-<script>
-    // One entry for each hour (0-23)
-    const activities = [
-        "Sleep Time",
-        "Sleep Time",
-        "Sleep Time",
-        "Sleep Time",
-        "Sleep Time",
-        "Sleep Time",
-        "Sleep Time",
-        "Sleep Time",
-        "Wake up. Its morning. Get cleaned and dressed for Breakfast",
-        "Go for Breakfast - Ask for Porridge, Egg and Toast",
-        "Horse Racing at 10.30",
-        "No Activity scheduled",
-        "Are you hungry? Go for Lunch; Not hungry. Ring bell to be put back to bed",
-        "Afternoon Nap",
-        "Afternoon Nap",
-        "Afternoon Nap",
-        "Wake up. Get ready for Horlicks and snacks;Karthik coming at 4.45pm",
-        "Out and About",
-        "Out and About",
-        "Time for Dinner",
-        "Get ready for bed",
-        "Sleep Time. Goodnight",
-        "Sleep Time. Goodnight",
-        "Sleep Time. Goodnight"
-    ];
+    <!-- Clock Display Panel -->
+    <div id="clockPanel">
 
-    function updateDisplay() {
-        const now = new Date();
+        <h1 id="dateHeading"></h1>
 
-        // Date heading
-        const weekday = now.toLocaleDateString('en-US', { weekday: 'long' });
-        const month = now.toLocaleDateString('en-US', { month: 'long' });
-        const day = now.getDate();
-        const year = now.getFullYear();
+        <h2 id="timeHeading"></h2>
 
-        document.getElementById("dateHeading").textContent =
-        `${weekday} - ${month} ${day}, ${year}`;
+    </div>
 
-        // Time heading
-        const hour = now.getHours();
-        const minute = now.getMinutes();
 
-        const hour12 = hour % 12 || 12;
-        const timeString =
-            String(hour12) + ":" +
-            String(minute).padStart(2, '0');
 
-        let period;
+    <!-- Activity Display Panel -->
+    <div id="activityPanel">
 
-        if (hour >= 5 && hour < 12) {
-            period = "morning";
-            }
-        else if (hour >= 12 && hour < 16) {
-            period = "afternoon";
-            }
-        else if (hour >= 16 && hour < 20) {
-            period = "evening";
-            }
-        else {
-            period = "night";
-            }
+        <h1 id="activityTitle">
+            Current Activities
+        </h1>
 
-        document.getElementById("timeHeading").textContent =
-            `${timeString} in the ${period}`;
-        
-        // Third heading: activity based on current hour
-        const activity = activities[hour] || "No Activity Defined";
+        <div id="activityHeading"></div>
 
-        // Split on ';' and display each segment on its own line
-        document.getElementById("activityHeading").innerHTML =
-            activity.split(';').join('<br>');
-    }
+    </div>
 
-    // Initial display
-    updateDisplay();
 
-    // Refresh every minute
-    setInterval(updateDisplay, 60 * 1000);
-</script>
+
+    <!-- Application Logic -->
+    <script src="script.js"></script>
+
 
 </body>
+
 </html>

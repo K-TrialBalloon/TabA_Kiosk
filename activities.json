@@ -1,0 +1,117 @@
+[
+    {
+        "type": "daily",
+        "start": "08:30",
+        "lead": 15,
+        "lag": 45,
+        "priority": "normal",
+        "title": "Meal Time",
+        "text": "Go for a good Breakfast; Have Porridge, Egg and Toast"
+    },
+
+
+    {
+        "type": "weekly",
+        "days": [2, 4],
+        "start": "10:30",
+        "lead": 20,
+        "lag": 05,
+        "priority": "normal",
+        "title": "Exercise",
+        "text": "Hand Therapy"
+    },
+
+
+    {
+        "type": "daily",
+        "start": "12:00",
+        "lead": 15,
+        "lag": 15,
+        "priority": "normal",
+        "title": "Meal Time",
+        "text": "If hungry, go for Lunch; If not hungry, ring bell to call Help to be put back to bed"
+    },
+
+
+    {
+        "type": "daily",
+        "start": "16:45",
+        "lead": 10,
+        "lag": 25,
+        "priority": "high",
+        "title": "Visitor",
+        "text": "Karthik coming around 4:45pm"
+    },
+
+
+    {
+        "type": "daily",
+        "start": "21:00",
+        "lead": 15,
+        "lag": 60,
+        "priority": "normal",
+        "title": "Sleep Time",
+        "text": "Goodnight. Sleep tight; TV will switch off automatically"
+    },
+
+
+    {
+        "type": "once",
+        "date": "2026-07-30",
+        "start": "18:15",
+        "lead": 20,
+        "lag": 10,
+        "priority": "normal",
+        "title": "Music Event",
+        "text": "Pipes and Drums Band"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-07-25",
+        "start": "10:30",
+        "lead": 20,
+        "lag": 10,
+        "priority": "normal",
+        "title": "Sport",
+        "text": "Curling at Great Hall"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-07-27",
+        "start": "10:30",
+        "lead": 20,
+        "lag": 10,
+        "priority": "normal",
+        "title": "Music",
+        "text": "Classical Interlude at Library"
+    },
+
+
+    {
+        "type": "weekly",
+        "days": [3],
+        "effectiveFrom": "2026-07-01",
+        "effectiveTo": "2026-07-31",
+        "start": "10:00",
+        "lead": 15,
+        "lag": 15,
+        "priority": "normal",
+        "title": "Fun",
+        "text": "Brain Games"
+    },
+    {
+        "type": "weekly",
+        "days": [3],
+        "effectiveFrom": "2026-07-01",
+        "effectiveTo": "2026-07-31",
+        "start": "11:00",
+        "lead": 15,
+        "lag": 15,
+        "priority": "normal",
+        "title": "Exercise",
+        "text": "Exercises at Great Hall"
+    }
+
+]

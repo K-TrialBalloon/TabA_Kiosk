@@ -1,0 +1,288 @@
+/*
+    Daily Activity Display
+    Screen styling for Samsung Galaxy Tab A
+*/
+
+
+/* Overall page */
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: white;
+
+    color: black;
+
+    text-align: center;
+
+    margin: 0;
+
+    padding-top: 50px;
+
+}
+
+
+
+/*
+    CLOCK DISPLAY
+*/
+
+
+#clockPanel {
+
+    width: 95%;
+
+    margin: auto;
+
+}
+
+
+#dateHeading {
+
+    font-size: 4.5rem;
+
+    font-weight: bold;
+
+    margin: 20px 0;
+
+    color: black;
+
+}
+
+
+
+#timeHeading {
+
+    font-size: 4.5rem;
+
+    font-weight: normal;
+
+    margin: 20px 0;
+
+    color: black;
+
+}
+
+
+
+/*
+    ACTIVITY DISPLAY
+*/
+
+
+#activityPanel {
+
+    width: 95%;
+
+    margin: auto;
+
+}
+
+
+
+#activityTitle {
+
+    font-size: 3.5rem;
+
+    color: #003366;
+
+    margin-bottom: 35px;
+
+}
+
+
+
+#activityHeading {
+
+    width: 95%;
+
+    margin: auto;
+
+}
+
+
+
+/*
+    Individual activity cards
+*/
+
+
+.activityCard {
+
+    width: 90%;
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background-color: #eef6ff;
+
+    border: 4px solid #1976d2;
+
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.20);
+
+}
+
+
+
+/*
+    Priority colours
+*/
+
+
+.priority-high {
+
+    border-color: #d32f2f;
+
+    background-color: #fff0f0;
+
+}
+
+
+
+.priority-normal {
+
+    border-color: #1976d2;
+
+    background-color: #eef6ff;
+
+}
+
+
+
+.priority-low {
+
+    border-color: #388e3c;
+
+    background-color: #f1fff1;
+
+}
+
+
+
+/*
+    Activity scheduled time
+*/
+
+
+.activityTime {
+
+    font-size: 3rem;
+
+    font-weight: bold;
+
+    color: #003366;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+/*
+    Activity status
+*/
+
+
+.activityStatus {
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    color: #c62828;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/*
+    Activity description
+*/
+
+
+.activityText {
+
+    font-size: 2.6rem;
+
+    line-height: 1.5;
+
+    color: #000080;
+
+}
+
+
+
+/*
+    No activity message
+*/
+
+
+.none {
+
+    font-size: 3rem;
+
+    color: grey;
+
+    margin-top: 50px;
+
+}
+
+
+
+/*
+    Small screen adjustment
+    (for older tablets held portrait)
+*/
+
+
+@media (max-width: 800px) {
+
+
+    #dateHeading {
+
+        font-size: 3rem;
+
+    }
+
+
+    #timeHeading {
+
+        font-size: 3rem;
+
+    }
+
+
+    #activityTitle {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .activityTime {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    .activityStatus {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .activityText {
+
+        font-size: 2rem;
+
+    }
+
+}
