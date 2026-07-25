@@ -15,7 +15,7 @@
         "days": [2, 4],
         "start": "10:30",
         "lead": 20,
-        "lag": 05,
+        "lag": 5,
         "priority": "normal",
         "title": "Exercise",
         "text": "Hand Therapy"
