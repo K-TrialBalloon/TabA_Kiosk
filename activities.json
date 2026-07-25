@@ -32,6 +32,16 @@
         "text": "If hungry, go for Lunch; If not hungry, ring bell to call Help to be put back to bed"
     },
 
+    {
+        "type": "daily",
+        "start": "07:30",
+        "lead": 65,
+        "lag": 45,
+        "priority": "normal",
+        "title": "Dummy",
+        "text": "Just a dummy rntry; Trying to test"
+    },
+
 
     {
         "type": "daily",
