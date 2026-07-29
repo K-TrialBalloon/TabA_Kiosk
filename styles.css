@@ -170,7 +170,7 @@ body {
 
 .activityTime {
 
-    font-size: 3rem;
+    font-size: 3.5rem;
 
     font-weight: bold;
 
@@ -189,7 +189,7 @@ body {
 
 .activityStatus {
 
-    font-size: 2rem;
+    font-size: 2.5rem;
 
     font-weight: bold;
 
@@ -208,7 +208,7 @@ body {
 
 .activityText {
 
-    font-size: 2.6rem;
+    font-size: 3.0rem;
 
     line-height: 1.5;
 
@@ -225,7 +225,7 @@ body {
 
 .none {
 
-    font-size: 3rem;
+    font-size: 3.5rem;
 
     color: grey;
 

@@ -66,8 +66,8 @@ function updateClock(now) {
         );
 
 
-    document.getElementById("dateHeading").textContent =
-        `${weekday} - ${month} ${now.getDate()}, ${now.getFullYear()}`;
+    document.getElementById("dateHeading").innerHTML =
+    `${weekday} - ${month} ${now.getDate()}<br>${now.getFullYear()}`;
 
 
 

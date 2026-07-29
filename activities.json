@@ -1,12 +1,12 @@
 [
     {
         "type": "daily",
-        "start": "08:30",
+        "start": "08:45",
         "lead": 15,
         "lag": 45,
         "priority": "normal",
         "title": "Meal Time",
-        "text": "Go for a good Breakfast; Have Porridge, Egg and Toast"
+        "text": "Time for Breakfast; Have Porridge, Egg and Toast"
     },
 
 
@@ -16,49 +16,39 @@
         "start": "10:30",
         "lead": 20,
         "lag": 5,
-        "priority": "normal",
+        "priority": "high",
         "title": "Exercise",
-        "text": "Hand Therapy"
+        "text": "You have Hand Therapy in the Library; Someone will take you there."
     },
 
 
     {
         "type": "daily",
-        "start": "12:00",
-        "lead": 15,
-        "lag": 15,
+        "start": "11:45",
+        "lead": 20,
+        "lag": 5,
         "priority": "normal",
         "title": "Meal Time",
-        "text": "If hungry, go for Lunch; If not hungry, ring bell to call Help to be put back to bed"
+        "text": "Are you hungry?; Lunch starts soon; Not Hungry. ring bell to call Help to be put back to bed"
     },
 
-    {
-        "type": "daily",
-        "start": "07:30",
-        "lead": 65,
-        "lag": 45,
-        "priority": "normal",
-        "title": "Dummy",
-        "text": "Just a dummy rntry; Trying to test"
-    },
-
-
+    
     {
         "type": "daily",
         "start": "16:45",
-        "lead": 10,
-        "lag": 25,
-        "priority": "high",
+        "lead": 20,
+        "lag": 20,
+        "priority": "normal",
         "title": "Visitor",
-        "text": "Karthik coming around 4:45pm"
+        "text": "Karthik coming around 4:45pm; Time for Horlicks and Biscuits"
     },
 
 
     {
         "type": "daily",
-        "start": "21:00",
-        "lead": 15,
-        "lag": 60,
+        "start": "21:30",
+        "lead": 10,
+        "lag": 30,
         "priority": "normal",
         "title": "Sleep Time",
         "text": "Goodnight. Sleep tight; TV will switch off automatically"
@@ -73,7 +63,7 @@
         "lag": 10,
         "priority": "normal",
         "title": "Music Event",
-        "text": "Pipes and Drums Band"
+        "text": "Pipes and Drums Band in Parking Lot"
     },
 
     {
@@ -118,10 +108,10 @@
         "effectiveTo": "2026-07-31",
         "start": "10:00",
         "lead": 15,
-        "lag": 15,
-        "priority": "normal",
-        "title": "Fun",
-        "text": "Brain Games"
+        "lag": 5,
+        "priority": "high",
+        "title": "Fun Activity",
+        "text": "Go for Brain Games Activity"
     },
     {
         "type": "weekly",
@@ -130,8 +120,8 @@
         "effectiveTo": "2026-07-31",
         "start": "11:00",
         "lead": 15,
-        "lag": 15,
-        "priority": "normal",
+        "lag": 5,
+        "priority": "high",
         "title": "Exercise",
         "text": "Exercises at Great Hall"
     }
