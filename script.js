@@ -453,7 +453,7 @@ function updateActivities(now) {
 /*
     Main refresh routine
 
-    Runs every 15 seconds
+    Runs every 30 seconds
 */
 
 function refreshDisplay() {
@@ -497,5 +497,5 @@ loadActivities();
 
 setInterval(
     refreshDisplay,
-    15000
+    30000
 );
