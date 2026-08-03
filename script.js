@@ -507,7 +507,7 @@ function calculateOpacity() {
     }
 
     // Fully dim overnight
-    if (now >= fadeEnd && now < brightenStart) {
+    if (now >= fadeEnd || now < brightenStart) {
         return MAX_DIM;
     }
 
