@@ -21,12 +21,24 @@
         "text": "You have Hand Therapy in the Library; Someone will take you there."
     },
 
+    {
+        "type": "weekly",
+        "days": [4],
+        "start": "18:00",
+        "lead": 20,
+        "lag": 5,
+        "priority": "high",
+        "title": "Evening programs for August",
+        "text": "Aug 6 - Paint Night;Aug 13 - Bocce Ball;Aug 20 - Trivia Night;Aug 27 - Pub Night"
+    },
+
+
 
     {
         "type": "daily",
         "start": "11:45",
         "lead": 20,
-        "lag": 5,
+        "lag": 15,
         "priority": "normal",
         "title": "Meal Time",
         "text": "Are you hungry?; Lunch starts soon; Not Hungry. ring bell to call Help to be put back to bed"
@@ -57,55 +69,122 @@
 
     {
         "type": "once",
-        "date": "2026-07-30",
-        "start": "18:15",
+        "date": "2026-08-17",
+        "start": "18:30",
         "lead": 20,
         "lag": 10,
         "priority": "normal",
         "title": "Music Event",
-        "text": "Pipes and Drums Band in Parking Lot"
+        "text": "Mus-Art at the Courtyard"
     },
 
     {
         "type": "once",
-        "date": "2026-07-25",
+        "date": "2026-08-24",
         "start": "10:30",
         "lead": 20,
         "lag": 10,
         "priority": "normal",
-        "title": "Sport",
-        "text": "Curling at Great Hall"
+        "title": "Multiple Options",
+        "text": "Choose to go either for Choir or Men's Club"
     },
 
     {
         "type": "once",
-        "date": "2026-07-27",
+        "date": "2026-06-31",
         "start": "10:30",
         "lead": 20,
         "lag": 10,
         "priority": "normal",
         "title": "Music",
-        "text": "Classical Interlude at Library"
+        "text": "Go for Heartbeats in the Great Hall"
     },
 
     {
         "type": "once",
-        "date": "2026-07-25",
-        "start": "01:00",
+        "date": "2026-08-07",
+        "start": "10:00",
         "lead": 20,
         "lag": 10,
         "priority": "normal",
-        "title": "Music",
-        "text": "Classical Interlude at Library"
+        "title": "Fun",
+        "text": "You be the Judge (Living Room)"
     },
 
+    {
+        "type": "once",
+        "date": "2026-08-07",
+        "start": "11:00",
+        "lead": 20,
+        "lag": 10,
+        "priority": "normal",
+        "title": "Exercise",
+        "text": "Exercises (Great Hall)"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-08-14",
+        "start": "10:30",
+        "lead": 20,
+        "lag": 10,
+        "priority": "normal",
+        "title": "Fun",
+        "text": "Advanced Jeopardy (Great Hall)"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-08-14",
+        "start": "11:00",
+        "lead": 20,
+        "lag": 10,
+        "priority": "normal",
+        "title": "Exercise",
+        "text": "Exercises (Great Hall)"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-08-21",
+        "start": "12:30",
+        "lead": 20,
+        "lag": 10,
+        "priority": "normal",
+        "title": "Fun",
+        "text": "SUMMER CARNIVAL"
+    },
+
+    
+    {
+        "type": "once",
+        "date": "2026-08-22",
+        "start": "9:30",
+        "lead": 10,
+        "lag": 120,
+        "priority": "high",
+        "title": "Fun",
+        "text": "HAPPY BIRTHDAY CHEEMA"
+    },
+
+
+    {
+        "type": "once",
+        "date": "2026-08-25",
+        "start": "10:30",
+        "lead": 20,
+        "lag": 10,
+        "priority": "normal",
+        "title": "Fun",
+        "text": "Curling (Great Hall)"
+    },
 
 
     {
         "type": "weekly",
         "days": [3],
-        "effectiveFrom": "2026-07-01",
-        "effectiveTo": "2026-07-31",
+        "effectiveFrom": "2026-08-01",
+        "effectiveTo": "2026-08-31",
         "start": "10:00",
         "lead": 15,
         "lag": 5,
@@ -113,11 +192,12 @@
         "title": "Fun Activity",
         "text": "Go for Brain Games Activity"
     },
+
     {
         "type": "weekly",
         "days": [3],
-        "effectiveFrom": "2026-07-01",
-        "effectiveTo": "2026-07-31",
+        "effectiveFrom": "2026-08-01",
+        "effectiveTo": "2026-08-31",
         "start": "11:00",
         "lead": 15,
         "lag": 5,
@@ -125,5 +205,6 @@
         "title": "Exercise",
         "text": "Exercises at Great Hall"
     }
-
+    
+    
 ]

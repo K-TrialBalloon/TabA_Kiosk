@@ -101,8 +101,19 @@ body {
 
 }
 
+/*
+   Dimming overlay
+*/
 
-
+#nightOverlay {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99999;
+    transition: opacity 30s linear;
+}
 /*
     Individual activity cards
 */
@@ -225,9 +236,9 @@ body {
 
 .none {
 
-    font-size: 3.5rem;
+    font-size: 4.5rem;
 
-    color: grey;
+    color: green;
 
     margin-top: 50px;
 

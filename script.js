@@ -8,9 +8,10 @@
     - Handles effective date ranges
     - Displays multiple simultaneous activities
     - Alternates clock and activity screens
+    - Dims screen gradually as sleep time approaches and brightens as wake-up time nears
 */
 
-
+const MAX_DIM = 0.75;   // Maximum darkness (0.0 - 1.0)
 let activities = [];
 
 let showClock = true;
@@ -377,7 +378,7 @@ function updateActivities(now) {
 
 
         container.innerHTML =
-            "<div class='none'>No Activities Scheduled</div>";
+            "<div class='none'>No Activity for now</div>";
 
 
         return;
@@ -406,16 +407,16 @@ function updateActivities(now) {
 
             <div class="activityTime">
 
-                ${activity.start}
+                <!-- ${activity.start} -->
 
             </div>
 
 
             <div class="activityStatus">
 
-                ${activity.status}
+                <!-- ${activity.status} -->
 
-            </div>
+            </div> 
 
 
             <div class="activityText">
@@ -481,20 +482,54 @@ function refreshDisplay() {
 
 
     showClock = !showClock;
-
+    updateOverlay();
 
 }
 
+function minutesSinceMidnight() {
+    const now = new Date();
+    return now.getHours() * 60 + now.getMinutes();
+}
 
+function calculateOpacity() {
+
+    const now = minutesSinceMidnight();
+
+    const fadeStart = 21 * 60 + 30;        // 9:30  PM
+    const fadeEnd   = 22 * 60;        // 10:00 PM
+
+    const brightenStart = 7 * 60;    // 7:00 AM
+    const brightenEnd   = 7 * 60 + 30     // 7:30 AM
+    
+    // Fade in
+    if (now >= fadeStart && now < fadeEnd) {
+        return ((now - fadeStart) / (fadeEnd - fadeStart)) * MAX_DIM;
+    }
+
+    // Fully dim overnight
+    if (now >= fadeEnd && now < brightenStart) {
+        return MAX_DIM;
+    }
+
+    // Fade out
+    if (now >= brightenStart && now < brightenEnd) {
+        return (1 - ((now - brightenStart) / (brightenEnd - brightenStart))) * MAX_DIM;
+    }
+
+    // Daytime
+    return 0;
+}
+
+function updateOverlay() {
+    document.getElementById("nightOverlay").style.opacity = calculateOpacity();
+}
 
 /*
     Start application
 */
 
 loadActivities();
-
-
-
+updateOverlay();
 setInterval(
     refreshDisplay,
     30000
