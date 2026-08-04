@@ -459,7 +459,7 @@ function updateActivities(now) {
 
 function refreshDisplay() {
 
-
+    updateOverlay();
     const now = new Date();
 
 
@@ -482,7 +482,7 @@ function refreshDisplay() {
 
 
     showClock = !showClock;
-    updateOverlay();
+    
 
 }
 
@@ -529,7 +529,6 @@ function updateOverlay() {
 */
 
 loadActivities();
-updateOverlay();
 setInterval(
     refreshDisplay,
     30000
