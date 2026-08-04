@@ -28,7 +28,7 @@
         "lead": 20,
         "lag": 5,
         "priority": "high",
-        "title": "Evening programs for August",
+        "title": "Evening programs for August at 6.00pm (Parlour)",
         "text": "Aug 6 - Paint Night;Aug 13 - Bocce Ball;Aug 20 - Trivia Night;Aug 27 - Pub Night"
     },
 
@@ -41,7 +41,7 @@
         "lag": 15,
         "priority": "normal",
         "title": "Meal Time",
-        "text": "Are you hungry?; Lunch starts soon; Not Hungry. ring bell to call Help to be put back to bed"
+        "text": "Are you hungry? Lunch starts soon; Not Hungry. ring bell to call Help to be put back to bed"
     },
 
     
@@ -52,7 +52,7 @@
         "lag": 20,
         "priority": "normal",
         "title": "Visitor",
-        "text": "Karthik coming around 4:45pm; Time for Horlicks and Biscuits"
+        "text": "Karthik coming around 4:45pm; Time for Evening snack - Horlicks and Biscuits"
     },
 
 
@@ -132,6 +132,18 @@
         "title": "Fun",
         "text": "Advanced Jeopardy (Great Hall)"
     },
+
+    {
+        "type": "once",
+        "date": "2026-08-04",
+        "start": "16:20",
+        "lead": 2,
+        "lag": 2,
+        "priority": "normal",
+        "title": "Fun",
+        "text": "Dummy Event to test timing"
+    },
+
 
     {
         "type": "once",
