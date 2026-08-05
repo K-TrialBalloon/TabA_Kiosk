@@ -136,12 +136,12 @@
     {
         "type": "once",
         "date": "2026-08-05",
-        "start": "7:30",
-        "lead": 2,
+        "start": "8:10",
+        "lead": 20,
         "lag": 2,
         "priority": "normal",
         "title": "Fun",
-        "text": "Dummy Event to test timing"
+        "text": "Dummy Event2 to test timing"
     },
 
 
