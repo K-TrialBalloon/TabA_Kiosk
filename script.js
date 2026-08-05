@@ -26,9 +26,12 @@ async function loadActivities(refreshHours = 0) {
 
     try {
 
-        const response = await fetch("activities.json", {
-                               cache: "no-cache"
-                         });
+        const response = await fetch(
+               `activities.json?ts=${Date.now()}`,
+                 {
+                     cache: "no-store"
+                 }
+               );
 
         activities = await response.json();
 
@@ -77,7 +80,7 @@ function updateClock(now) {
 
 
     document.getElementById("dateHeading").innerHTML =
-    `${weekday} - ${month} ${now.getDate()}<br>${now.getFullYear()}`;
+    `${weekday} - ${month} ${now.getDate()}<br>${now.getFullYear()}<br>`;
 
 
 
