@@ -1,6 +1,6 @@
 /*
     Daily Activity Display
-    Screen styling for Samsung Galaxy Tab A
+    Screen styling for Tablet
 */
 
 
@@ -40,7 +40,7 @@ body {
 
 #dateHeading {
 
-    font-size: 4.5rem;
+    font-size: 5rem;
 
     font-weight: bold;
 
@@ -54,9 +54,9 @@ body {
 
 #timeHeading {
 
-    font-size: 4.5rem;
+    font-size: 5rem;
 
-    font-weight: normal;
+    font-weight: bold;
 
     margin: 20px 0;
 
