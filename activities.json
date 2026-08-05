@@ -136,7 +136,7 @@
     {
         "type": "once",
         "date": "2026-08-05",
-        "start": "8:10",
+        "start": "16:10",
         "lead": 20,
         "lag": 2,
         "priority": "normal",
