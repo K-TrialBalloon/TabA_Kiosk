@@ -11,21 +11,24 @@
     - Dims screen gradually as sleep time approaches and brightens as wake-up time nears
 */
 
-const MAX_DIM = 0.75;   // Maximum darkness (0.0 - 1.0)
+const MAX_DIM = 0.85;   // Maximum darkness (0.0 - 1.0)
 let activities = [];
 
 let showClock = true;
+let activityRefreshTimer = null;
 
 
 /*
     Load activity schedule
 */
 
-async function loadActivities() {
+async function loadActivities(refreshHours = 0) {
 
     try {
 
-        const response = await fetch("activities.json");
+        const response = await fetch("activities.json", {
+                               cache: "no-cache"
+                         });
 
         activities = await response.json();
 
@@ -40,6 +43,12 @@ async function loadActivities() {
 
         console.error("Activity loading error:", error);
 
+    }
+    // Set up automatic refresh only if requested
+    if (refreshHours > 0 && activityRefreshTimer === null) {
+        activityRefreshTimer = setInterval(() => {
+            loadActivities(0); // Reload once; don't create another timer
+        }, refreshHours * 60 * 60 * 1000);
     }
 
 }
@@ -495,11 +504,11 @@ function calculateOpacity() {
 
     const now = minutesSinceMidnight();
 
-    const fadeStart = 21 * 60 + 30;        // 9:30  PM
-    const fadeEnd   = 22 * 60;        // 10:00 PM
+    const fadeStart = 22 * 60;        // 10:00  PM
+    const fadeEnd   = 22 * 60 + 5;        // 10:05 PM
 
     const brightenStart = 7 * 60;    // 7:00 AM
-    const brightenEnd   = 7 * 60 + 30     // 7:30 AM
+    const brightenEnd   = 7 * 60 + 5     // 7:04 AM
     
     // Fade in
     if (now >= fadeStart && now < fadeEnd) {
@@ -528,7 +537,7 @@ function updateOverlay() {
     Start application
 */
 
-loadActivities();
+loadActivities(0.5);
 setInterval(
     refreshDisplay,
     30000
