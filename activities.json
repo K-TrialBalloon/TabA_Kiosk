@@ -51,8 +51,8 @@
         "lead": 20,
         "lag": 20,
         "priority": "normal",
-        "title": "Visitor",
-        "text": "Karthik coming around 4:45pm; Time for Evening snack - Horlicks and Biscuits"
+        "title": "Tiffin Time",
+        "text": "Time for Evening snack - Horlicks and Biscuits;Karthik will be visiting"
     },
 
 
@@ -89,17 +89,7 @@
         "text": "Choose to go either for Choir or Men's Club"
     },
 
-    {
-        "type": "once",
-        "date": "2026-06-31",
-        "start": "10:30",
-        "lead": 20,
-        "lag": 10,
-        "priority": "normal",
-        "title": "Music",
-        "text": "Go for Heartbeats in the Great Hall"
-    },
-
+    
     {
         "type": "once",
         "date": "2026-08-07",

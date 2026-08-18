@@ -12,6 +12,7 @@
 */
 
 const MAX_DIM = 0.85;   // Maximum darkness (0.0 - 1.0)
+const UPCOMING_MINUTES = 60;
 let activities = [];
 
 let showClock = true;
@@ -367,7 +368,94 @@ function getCurrentActivities(now) {
 
 }
 
+/*
+    Find the next upcoming activity
 
+    An activity is considered upcoming when its display-window
+    start time is no more than UPCOMING_MINUTES in the future.
+
+    The activity's display-window start is:
+        activity start time - lead time
+*/
+
+function getUpcomingActivities(now) {
+
+    const matches = [];
+
+    for (const activity of activities) {
+
+        if (!activityAppliesToday(activity, now))
+            continue;
+
+        if (!withinEffectiveDates(activity, now))
+            continue;
+
+        const parts = activity.start.split(":");
+
+        const start = new Date(now);
+
+        start.setHours(
+            Number(parts[0]),
+            Number(parts[1]),
+            0,
+            0
+        );
+
+        const windowStart =
+            new Date(
+                start.getTime()
+                -
+                activity.lead * 60000
+            );
+
+        /*
+            How many minutes until the activity's
+            display window begins?
+        */
+
+        const minutesUntilWindow =
+            (windowStart.getTime() - now.getTime())
+            / 60000;
+
+
+        /*
+            Only include activities whose display window
+            begins within the upcoming threshold.
+
+            > 0  = window has not started yet
+            <= X = window starts within X minutes
+        */
+
+        if (
+            minutesUntilWindow > 0 &&
+            minutesUntilWindow <= UPCOMING_MINUTES
+        ) {
+
+            matches.push({
+                ...activity,
+                windowStart: windowStart,
+                minutesUntilWindow: Math.ceil(minutesUntilWindow)
+            });
+
+        }
+
+    }
+
+
+    /*
+        Earliest display-window start first
+    */
+
+    matches.sort(
+        (a, b) =>
+            a.windowStart.getTime() -
+            b.windowStart.getTime()
+    );
+
+
+    return matches;
+
+}
 
 /*
     Display activities
@@ -375,92 +463,113 @@ function getCurrentActivities(now) {
 
 function updateActivities(now) {
 
+    const container =
+        document.getElementById("activityHeading");
+
+
+    /*
+        Current activities take priority.
+    */
 
     const current =
         getCurrentActivities(now);
 
 
+    if (current.length > 0) {
 
-    const container =
-        document.getElementById("activityHeading");
+        let html = "";
 
+        current.forEach(activity => {
 
+            const priority =
+                activity.priority || "normal";
 
-    if (current.length === 0) {
+            html += `
 
+                <div class="activityCard priority-${priority}">
 
-        container.innerHTML =
-            "<div class='none'>No Activity for now</div>";
+                    <div class="activityTime">
+                        <!-- ${activity.start} -->
+                    </div>
 
+                    <div class="activityStatus">
+                        <!-- ${activity.status} -->
+                    </div>
+
+                    <div class="activityText">
+
+                        <strong>
+                            ${activity.title || ""}
+                        </strong>
+
+                        <br>
+
+                        ${activity.text.replaceAll(";", "<br>")}
+
+                    </div>
+
+                </div>
+
+            `;
+        });
+
+        container.innerHTML = html;
 
         return;
-
     }
 
 
+    /*
+        No current activity.
+        Check for an upcoming activity.
+    */
 
-    let html = "";
+    const upcoming =
+        getUpcomingActivities(now);
 
 
+    if (upcoming.length > 0) {
 
-    current.forEach(activity => {
-
-
+        const activity = upcoming[0];
 
         const priority =
             activity.priority || "normal";
 
+        container.innerHTML = `
 
+            <div class="activityCard priority-${priority}">
 
-        html += `
+                <div class="activityText">
+                    Upcoming activity starts at ${activity.start}
+                    <br> 
+                    <strong>
+                        ${activity.title || ""}
+                    </strong>
 
-        <div class="activityCard priority-${priority}">
+                    <br>
 
+                    ${activity.text.replaceAll(";", "<br>")}
 
-            <div class="activityTime">
+                    <br>
 
-                <!-- ${activity.start} -->
-
-            </div>
-
-
-            <div class="activityStatus">
-
-                <!-- ${activity.status} -->
-
-            </div> 
-
-
-            <div class="activityText">
-
-
-                <strong>
-                    ${activity.title || ""}
-                </strong>
-
-                <br>
-
-
-                ${activity.text.replaceAll(";", "<br>")}
-
+                </div>
 
             </div>
-
-
-        </div>
 
         `;
 
+        return;
+    }
 
-    });
 
+    /*
+        No current or upcoming activity.
+    */
 
-
-    container.innerHTML = html;
-
+    container.innerHTML =
+        "<div class='none'>No Activity for now</div>";
 
 }
-
 
 
 /*
