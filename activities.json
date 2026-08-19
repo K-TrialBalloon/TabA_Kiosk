@@ -5,7 +5,8 @@
         "lead": 15,
         "lag": 45,
         "priority": "normal",
-        "title": "Meal Time",
+        "catg": "routine",
+        "title": "Ready for Breakfast?",
         "text": "Time for Breakfast; Have Porridge, Egg and Toast"
     },
 
@@ -16,8 +17,9 @@
         "start": "10:30",
         "lead": 20,
         "lag": 5,
-        "priority": "high",
-        "title": "Exercise",
+        "priority": "normal",
+        "catg": "activity",
+        "title": "Exercises",
         "text": "You have Hand Therapy in the Library; Someone will take you there."
     },
 
@@ -27,9 +29,10 @@
         "start": "18:00",
         "lead": 20,
         "lag": 5,
-        "priority": "high",
+        "priority": "normal",
+        "catg": "activity",
         "title": "Evening programs for August at 6.00pm (Parlour)",
-        "text": "Aug 6 - Paint Night;Aug 13 - Bocce Ball;Aug 20 - Trivia Night;Aug 27 - Pub Night"
+        "text": "Aug 20 - Trivia Night;Aug 27 - Pub Night"
     },
 
 
@@ -40,7 +43,8 @@
         "lead": 20,
         "lag": 15,
         "priority": "normal",
-        "title": "Meal Time",
+        "catg": "routine",
+        "title": "Ready for Lunch?",
         "text": "Are you hungry? Lunch starts soon; Not Hungry. ring bell to call Help to be put back to bed"
     },
 
@@ -51,19 +55,9 @@
         "lead": 20,
         "lag": 20,
         "priority": "normal",
+        "catg": "routine",
         "title": "Tiffin Time",
         "text": "Time for Evening snack - Horlicks and Biscuits;Karthik will be visiting"
-    },
-
-
-    {
-        "type": "daily",
-        "start": "21:30",
-        "lead": 10,
-        "lag": 30,
-        "priority": "normal",
-        "title": "Sleep Time",
-        "text": "Goodnight. Sleep tight; TV will switch off automatically"
     },
 
 
@@ -74,9 +68,23 @@
         "lead": 20,
         "lag": 10,
         "priority": "normal",
+        "catg": "activity",
         "title": "Music Event",
         "text": "Mus-Art at the Courtyard"
     },
+
+    {
+        "type": "once",
+        "date": "2026-08-19",
+        "start": "15:25",
+        "lead": 5,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "routine",
+        "title": "Dummy",
+        "text": "Dummy Event at the Courtyard"
+    },
+
 
     {
         "type": "once",
@@ -85,6 +93,7 @@
         "lead": 20,
         "lag": 10,
         "priority": "normal",
+        "catg": "activity",
         "title": "Multiple Options",
         "text": "Choose to go either for Choir or Men's Club"
     },
@@ -97,6 +106,7 @@
         "lead": 20,
         "lag": 10,
         "priority": "normal",
+        "catg": "activity",
         "title": "Fun",
         "text": "You be the Judge (Living Room)"
     },
@@ -108,8 +118,9 @@
         "lead": 20,
         "lag": 10,
         "priority": "normal",
+        "catg": "activity",
         "title": "Exercise",
-        "text": "Exercises (Great Hall)"
+        "text": "Go for Exercises (Great Hall)"
     },
 
     {
@@ -119,21 +130,10 @@
         "lead": 20,
         "lag": 10,
         "priority": "normal",
+        "catg": "activity",
         "title": "Fun",
         "text": "Advanced Jeopardy (Great Hall)"
     },
-
-    {
-        "type": "once",
-        "date": "2026-08-05",
-        "start": "16:10",
-        "lead": 20,
-        "lag": 2,
-        "priority": "normal",
-        "title": "Fun",
-        "text": "Dummy Event2 to test timing"
-    },
-
 
     {
         "type": "once",
@@ -142,8 +142,9 @@
         "lead": 20,
         "lag": 10,
         "priority": "normal",
+        "catg": "activity",
         "title": "Exercise",
-        "text": "Exercises (Great Hall)"
+        "text": "Go for Exercises (Great Hall)"
     },
 
     {
@@ -153,7 +154,8 @@
         "lead": 20,
         "lag": 10,
         "priority": "normal",
-        "title": "Fun",
+        "catg": "activity",
+        "title": "Fun Event",
         "text": "SUMMER CARNIVAL"
     },
 
@@ -165,6 +167,7 @@
         "lead": 10,
         "lag": 120,
         "priority": "high",
+        "catg": "special",
         "title": "Fun",
         "text": "HAPPY BIRTHDAY CHEEMA"
     },
@@ -177,8 +180,9 @@
         "lead": 20,
         "lag": 10,
         "priority": "normal",
-        "title": "Fun",
-        "text": "Curling (Great Hall)"
+        "catg": "activity",
+        "title": "Fun Event",
+        "text": "Go for Curling (Great Hall)"
     },
 
 
@@ -191,8 +195,9 @@
         "lead": 15,
         "lag": 5,
         "priority": "high",
+        "catg": "activity",
         "title": "Fun Activity",
-        "text": "Go for Brain Games Activity"
+        "text": "Go for Brain Games"
     },
 
     {
@@ -204,6 +209,7 @@
         "lead": 15,
         "lag": 5,
         "priority": "high",
+        "catg": "activity",
         "title": "Exercise",
         "text": "Exercises at Great Hall"
     }

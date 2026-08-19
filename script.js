@@ -235,16 +235,16 @@ function getCurrentActivities(now) {
 
     for (const activity of activities) {
 
+        if (activity.catg !== "routine" && activity.catg !== "activity")
+            continue;
 
 
         if (!activityAppliesToday(activity, now))
             continue;
 
 
-
         if (!withinEffectiveDates(activity, now))
             continue;
-
 
 
         const parts =
@@ -384,6 +384,9 @@ function getUpcomingActivities(now) {
 
     for (const activity of activities) {
 
+        if (activity.catg !== "activity")
+            continue;
+        
         if (!activityAppliesToday(activity, now))
             continue;
 
