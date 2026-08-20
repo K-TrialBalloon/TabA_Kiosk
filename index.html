@@ -31,11 +31,34 @@
     <!-- Activity Display Panel -->
     <div id="activityPanel">
 
-        <h1 id="activityTitle">
-            Activity Notifications
-        </h1>
+        <div id="normalActivityPanel">
 
-        <div id="activityHeading"></div>
+            <h1 id="activityTitle">
+                Activity Notifications
+            </h1>
+
+            <div id="activityHeading"></div>
+
+        </div>
+        <!-- Special Activity Page -->
+        <iframe
+            id="specialFrame"
+            title="Special Activity"
+            src="about:blank"
+            style="
+                display:none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                border: none;
+                box-sizing: border-box;
+                z-index: 10;
+            ">
+        </iframe>
 
     </div>
 

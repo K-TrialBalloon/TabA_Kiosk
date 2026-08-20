@@ -461,6 +461,64 @@ function getUpcomingActivities(now) {
 }
 
 /*
+    Get special page
+*/
+
+function getCurrentSpecialPages(now) {
+
+    const matches = [];
+
+    for (const activity of activities) {
+
+        if (activity.catg !== "special")
+            continue;
+
+        if (!activityAppliesToday(activity, now))
+            continue;
+
+        if (!withinEffectiveDates(activity, now))
+            continue;
+
+        const parts = activity.start.split(":");
+
+        const start = new Date(now);
+
+        start.setHours(
+            Number(parts[0]),
+            Number(parts[1]),
+            0,
+            0
+        );
+
+        const windowStart =
+            new Date(
+                start.getTime() -
+                activity.lead * 60000
+            );
+
+        const windowEnd =
+            new Date(
+                start.getTime() +
+                activity.lag * 60000
+            );
+
+        if (
+            now >= windowStart &&
+            now <= windowEnd
+        ) {
+            matches.push(activity);
+        }
+    }
+
+    matches.sort(
+        (a, b) =>
+            a.start.localeCompare(b.start)
+    );
+
+    return matches;
+}
+
+/*
     Display activities
 */
 
@@ -584,32 +642,67 @@ function updateActivities(now) {
 function refreshDisplay() {
 
     updateOverlay();
+
     const now = new Date();
-
-
 
     updateClock(now);
 
+    const specialPages =
+        getCurrentSpecialPages(now);
 
-    updateActivities(now);
+    const normalActivityPanel =
+        document.getElementById("normalActivityPanel");
 
 
+    const specialFrame =
+        document.getElementById("specialFrame");
+
+
+    /*
+        If a special page is active, prepare it.
+    */
+
+    if (specialPages.length > 0) {
+
+        const page = specialPages[0].page;
+
+        if (specialFrame.src !==
+            new URL(page, window.location.href).href) {
+
+            specialFrame.src = page;
+        }
+
+        normalActivityPanel.style.display = "none";
+        specialFrame.style.display = "block";
+
+    }
+
+    /*
+        Otherwise show the normal activity notification.
+    */
+
+    else {
+
+        specialFrame.style.display = "none";
+        normalActivityPanel.style.display = "block";
+
+        updateActivities(now);
+    }
+
+
+    /*
+        Toggle between clock and activity/special page.
+    */
 
     document.getElementById("clockPanel").style.display =
         showClock ? "block" : "none";
-
-
 
     document.getElementById("activityPanel").style.display =
         showClock ? "none" : "block";
 
 
-
     showClock = !showClock;
-    
-
 }
-
 function minutesSinceMidnight() {
     const now = new Date();
     return now.getHours() * 60 + now.getMinutes();

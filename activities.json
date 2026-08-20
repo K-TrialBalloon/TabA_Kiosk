@@ -162,14 +162,12 @@
     
     {
         "type": "once",
-        "date": "2026-08-22",
-        "start": "9:30",
-        "lead": 10,
-        "lag": 120,
-        "priority": "high",
+        "date": "2026-08-20",
+        "start": "17:00",
+        "lead": 2,
+        "lag": 2,
         "catg": "special",
-        "title": "Fun",
-        "text": "HAPPY BIRTHDAY CHEEMA"
+        "page": "birthday.html"
     },
 
 
