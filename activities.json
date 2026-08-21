@@ -1,9 +1,9 @@
 [
     {
         "type": "daily",
-        "start": "08:45",
+        "start": "09:00",
         "lead": 15,
-        "lag": 45,
+        "lag": 30,
         "priority": "normal",
         "catg": "routine",
         "title": "Ready for Breakfast?",
@@ -32,7 +32,7 @@
         "priority": "normal",
         "catg": "activity",
         "title": "Evening programs for August at 6.00pm (Parlour)",
-        "text": "Aug 20 - Trivia Night;Aug 27 - Pub Night"
+        "text": "Aug 27 - Pub Night"
     },
 
 
@@ -40,7 +40,7 @@
     {
         "type": "daily",
         "start": "11:45",
-        "lead": 20,
+        "lead": 15,
         "lag": 15,
         "priority": "normal",
         "catg": "routine",
@@ -73,19 +73,7 @@
         "text": "Mus-Art at the Courtyard"
     },
 
-    {
-        "type": "once",
-        "date": "2026-08-19",
-        "start": "15:25",
-        "lead": 5,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "routine",
-        "title": "Dummy",
-        "text": "Dummy Event at the Courtyard"
-    },
-
-
+    
     {
         "type": "once",
         "date": "2026-08-24",
@@ -156,16 +144,16 @@
         "priority": "normal",
         "catg": "activity",
         "title": "Fun Event",
-        "text": "SUMMER CARNIVAL"
+        "text": "SUMMER CARNIVAL in Parlour"
     },
 
     
     {
         "type": "once",
-        "date": "2026-08-20",
-        "start": "17:00",
-        "lead": 2,
-        "lag": 2,
+        "date": "2026-08-22",
+        "start": "10:30",
+        "lead": 90,
+        "lag": 90,
         "catg": "special",
         "page": "birthday.html"
     },

@@ -12,7 +12,7 @@
 */
 
 const MAX_DIM = 0.85;   // Maximum darkness (0.0 - 1.0)
-const UPCOMING_MINUTES = 60;
+const UPCOMING_MINUTES = 30;
 let activities = [];
 
 let showClock = true;
