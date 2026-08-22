@@ -151,9 +151,9 @@
     {
         "type": "once",
         "date": "2026-08-22",
-        "start": "14:30",
-        "lead": 15,
-        "lag": 90,
+        "start": "20:00",
+        "lead": 120,
+        "lag": 120,
         "catg": "special",
         "page": "birthday.html"
     },
