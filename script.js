@@ -9,6 +9,8 @@
     - Displays multiple simultaneous activities
     - Alternates clock and activity screens
     - Dims screen gradually as sleep time approaches and brightens as wake-up time nears
+    - Displays notifications on upcoming activities (catg=activity) only
+    - displays special messages if active on a priority basis overriding other eligible messages
 */
 
 const MAX_DIM = 0.85;   // Maximum darkness (0.0 - 1.0)
@@ -524,9 +526,11 @@ function getCurrentSpecialPages(now) {
 
 function updateActivities(now) {
 
+    const container1 =
+        document.getElementById("activityPreText");
+
     const container =
         document.getElementById("activityHeading");
-
 
     /*
         Current activities take priority.
@@ -539,6 +543,7 @@ function updateActivities(now) {
     if (current.length > 0) {
 
         let html = "";
+        let html1 = "";
 
         current.forEach(activity => {
 
@@ -549,21 +554,7 @@ function updateActivities(now) {
 
                 <div class="activityCard priority-${priority}">
 
-                    <div class="activityTime">
-                        <!-- ${activity.start} -->
-                    </div>
-
-                    <div class="activityStatus">
-                        <!-- ${activity.status} -->
-                    </div>
-
                     <div class="activityText">
-
-                        <strong>
-                            ${activity.title || ""}
-                        </strong>
-
-                        <br>
 
                         ${activity.text.replaceAll(";", "<br>")}
 
@@ -572,9 +563,16 @@ function updateActivities(now) {
                 </div>
 
             `;
+            html1 += `
+                     <div class="${activity.catg === "activity" ? "activityStatus" : "activityStatus green"}">
+                         ${activity.catg === "activity" ? (activity.status || "") : "Just a Reminder"}
+                     </div>
+                    `;
+
         });
 
         container.innerHTML = html;
+        container1.innerHTML = html1;
 
         return;
     }
@@ -596,18 +594,22 @@ function updateActivities(now) {
         const priority =
             activity.priority || "normal";
 
+        container1.innerHTML = `
+
+                <div class="activityStatus green">
+                     Upcoming activity starts at ${activity.start} 
+                     <br>
+                </div>
+            `;
         container.innerHTML = `
 
             <div class="activityCard priority-${priority}">
 
                 <div class="activityText">
-                    Upcoming activity starts at ${activity.start}
                     <br> 
                     <strong>
                         ${activity.title || ""}
                     </strong>
-
-                    <br>
 
                     ${activity.text.replaceAll(";", "<br>")}
 
@@ -629,6 +631,14 @@ function updateActivities(now) {
 
     container.innerHTML =
         "<div class='none'>No Activity for now</div>";
+    
+    container1.innerHTML = `
+
+                <div class="activityStatus green">
+                     Time to RELAX 
+                </div>
+                `;
+
 
 }
 

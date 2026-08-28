@@ -1,13 +1,13 @@
 [
     {
         "type": "daily",
-        "start": "09:00",
+        "start": "09:15",
         "lead": 15,
         "lag": 30,
         "priority": "normal",
         "catg": "routine",
         "title": "Ready for Breakfast?",
-        "text": "Time for Breakfast; Have Porridge, Egg and Toast"
+        "text": "Go have Breakfast; Ask for Porridge, Egg and Toast"
     },
 
 
@@ -20,7 +20,7 @@
         "priority": "normal",
         "catg": "activity",
         "title": "Exercises",
-        "text": "You have Hand Therapy in the Library; Someone will take you there."
+        "text": "Hand Therapy in the Library; Someone will take you there."
     },
 
     {
@@ -45,15 +45,15 @@
         "priority": "normal",
         "catg": "routine",
         "title": "Ready for Lunch?",
-        "text": "Are you hungry? Lunch starts soon; Not Hungry. ring bell to call Help to be put back to bed"
+        "text": "Hungry? Go for Lunch; Not Hungry. ring bell to call Help; Ask to go back to bed"
     },
 
     
     {
         "type": "daily",
-        "start": "16:45",
-        "lead": 20,
-        "lag": 20,
+        "start": "17:00",
+        "lead": 15,
+        "lag": 15,
         "priority": "normal",
         "catg": "routine",
         "title": "Tiffin Time",
@@ -151,9 +151,9 @@
     {
         "type": "once",
         "date": "2026-08-22",
-        "start": "20:00",
-        "lead": 120,
-        "lag": 120,
+        "start": "14:30",
+        "lead": 15,
+        "lag": 90,
         "catg": "special",
         "page": "birthday.html"
     },
@@ -169,6 +169,30 @@
         "catg": "activity",
         "title": "Fun Event",
         "text": "Go for Curling (Great Hall)"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-08-28",
+        "start": "14:15",
+        "lead": 5,
+        "lag": 3,
+        "priority": "normal",
+        "catg": "activity",
+        "title": "Some Event",
+        "text": "This is a Dummy event;This is another;This is a third one"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-08-28",
+        "start": "15:30",
+        "lead": 5,
+        "lag": 3,
+        "priority": "normal",
+        "catg": "routine",
+        "title": "Some Other Event",
+        "text": "This is a routine activity"
     },
 
 

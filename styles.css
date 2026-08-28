@@ -201,17 +201,35 @@ body {
 
 .activityStatus {
 
-    font-size: 2.5rem;
+    font-size: 4rem;
 
     font-weight: bold;
 
     color: #c62828;
 
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 
 }
 
+.activityStatus.green {
+    color: green;
+}
 
+/*
+    Activity status description
+*/
+
+
+.activityPreText {
+
+    font-size: 4.0rem;
+
+    line-height: 1.5;
+
+    color: #000080;
+    font-weight: bold;
+
+}
 
 /*
     Activity description
@@ -220,11 +238,12 @@ body {
 
 .activityText {
 
-    font-size: 3.0rem;
+    font-size: 4.0rem;
 
     line-height: 1.5;
 
     color: #000080;
+    font-weight: bold;
 
 }
 
@@ -239,7 +258,7 @@ body {
 
     font-size: 4.5rem;
 
-    color: green;
+    color: black;
 
     margin-top: 50px;
 
