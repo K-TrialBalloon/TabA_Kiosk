@@ -173,26 +173,27 @@
 
     {
         "type": "once",
-        "date": "2026-08-28",
-        "start": "14:15",
-        "lead": 5,
-        "lag": 3,
+        "date": "2026-08-30",
+        "start": "11:33",
+        "lead": 3,
+        "lag": 2,
         "priority": "normal",
         "catg": "activity",
         "title": "Some Event",
-        "text": "This is a Dummy event;This is another;This is a third one"
+        "audioline": "Cheema go for the Dummy event. Ring bell for help",
+        "text": "This is a Dummy event;This is another"
     },
 
     {
         "type": "once",
-        "date": "2026-08-28",
-        "start": "15:30",
-        "lead": 5,
+        "date": "2026-08-31",
+        "start": "17:55",
+        "lead": 15,
         "lag": 3,
         "priority": "normal",
-        "catg": "routine",
-        "title": "Some Other Event",
-        "text": "This is a routine activity"
+        "catg": "activity",
+        "audioline": "Cheema go for this routine activity",
+        "text": "Go out and enjoy the Garden. Activity "
     },
 
 

@@ -3,20 +3,20 @@
 
     Main application logic:
     - Loads activities from activities.json
-    - Determines active activities
+    - Determines active,upcoming and special activities
     - Handles daily, weekly and one-time activities
     - Handles effective date ranges
-    - Displays multiple simultaneous activities
-    - Alternates clock and activity screens
+    - Toggles between clock and activity screens
     - Dims screen gradually as sleep time approaches and brightens as wake-up time nears
-    - Displays notifications on upcoming activities (catg=activity) only
-    - displays special messages if active on a priority basis overriding other eligible messages
+    - Individual messages can be marked to be spoken during subset of display window  
+    - Messages can be prioritized 
 */
 
-const MAX_DIM = 0.85;   // Maximum darkness (0.0 - 1.0)
-const UPCOMING_MINUTES = 30;
-let activities = [];
+const MAX_DIM = 0.85;          // Maximum darkness (0.0 - 1.0) for night overlay function
+const UPCOMING_MINUTES = 30;   // Lead Time to decide if an activity is upcoming. 
+const AUDIO = 'ON';            // Master variable to control message announcement
 
+let activities = [];
 let showClock = true;
 let activityRefreshTimer = null;
 
@@ -46,19 +46,17 @@ async function loadActivities(refreshHours = 0) {
 
         document.getElementById("activityHeading").innerHTML =
             "<div class='none'>Unable to load activities</div>";
-
         console.error("Activity loading error:", error);
 
     }
     // Set up automatic refresh only if requested
     if (refreshHours > 0 && activityRefreshTimer === null) {
         activityRefreshTimer = setInterval(() => {
-            loadActivities(0); // Reload once; don't create another timer
+            loadActivities(0);                           // Reload once; don't create another timer
         }, refreshHours * 60 * 60 * 1000);
     }
 
 }
-
 
 
 /*
@@ -86,17 +84,13 @@ function updateClock(now) {
     `${weekday} - ${month} ${now.getDate()}<br>${now.getFullYear()}<br>`;
 
 
-
     const hour = now.getHours();
 
     const minute = now.getMinutes();
 
-
     const hour12 = hour % 12 || 12;
 
-
     let period;
-
 
     if (hour >= 5 && hour < 12) {
 
@@ -129,7 +123,6 @@ function updateClock(now) {
 }
 
 
-
 /*
     Check if activity applies today
 */
@@ -154,17 +147,14 @@ function activityAppliesToday(activity, now) {
             return true;
 
 
-
         case "weekly":
 
             return activity.days.includes(now.getDay());
 
 
-
         case "once":
 
             return activity.date === today;
-
 
 
         default:
@@ -176,9 +166,8 @@ function activityAppliesToday(activity, now) {
 }
 
 
-
 /*
-    Check effective date range
+    Sometimes entries can have a start and end date when they are considered active
 */
 
 function withinEffectiveDates(activity, now) {
@@ -195,9 +184,7 @@ function withinEffectiveDates(activity, now) {
 
     if (activity.effectiveFrom) {
 
-
         const from = new Date(activity.effectiveFrom);
-
 
         if (today < from)
             return false;
@@ -208,15 +195,12 @@ function withinEffectiveDates(activity, now) {
 
     if (activity.effectiveTo) {
 
-
         const to = new Date(activity.effectiveTo);
-
 
         if (today > to)
             return false;
 
     }
-
 
     return true;
 
@@ -225,7 +209,8 @@ function withinEffectiveDates(activity, now) {
 
 
 /*
-    Find all currently active activities
+    Find all currently eligible activities whose display window is active
+    EXCLUDE anything that does not have a catg=[active, routine]
 */
 
 function getCurrentActivities(now) {
@@ -234,9 +219,9 @@ function getCurrentActivities(now) {
     const matches = [];
 
 
-
     for (const activity of activities) {
-
+        
+        
         if (activity.catg !== "routine" && activity.catg !== "activity")
             continue;
 
@@ -252,10 +237,7 @@ function getCurrentActivities(now) {
         const parts =
             activity.start.split(":");
 
-
-
         const start = new Date(now);
-
 
         start.setHours(
             Number(parts[0]),
@@ -264,15 +246,12 @@ function getCurrentActivities(now) {
             0
         );
 
-
-
         const windowStart =
             new Date(
                 start.getTime()
                 -
                 activity.lead * 60000
             );
-
 
 
         const windowEnd =
@@ -283,12 +262,10 @@ function getCurrentActivities(now) {
             );
 
 
-
         if (
             now >= windowStart &&
             now <= windowEnd
         ) {
-
 
 
             const difference =
@@ -299,10 +276,7 @@ function getCurrentActivities(now) {
                 );
 
 
-
             let status;
-
-
 
             if (difference > 1) {
 
@@ -338,14 +312,25 @@ function getCurrentActivities(now) {
                     `Started ${Math.abs(difference)} minutes ago`;
 
             }
-
-
+            
+            speakAudio = false;
+            /* We want to provide audio feedback only when the message display is active and only for messages
+               with an audioline that are within 5 to 3 mins of the actual entry sart time */
+            
+            if (AUDIO === 'ON' && 
+                showClock !== true && 
+                Object.hasOwn(activity, 'audioline') && 
+                difference <= 5 && 
+                difference >= 3) {
+                speakAudio = true;
+                }
 
             matches.push({
 
                 ...activity,
 
-                status: status
+                status: status,
+                speakAudio: speakAudio
 
             });
 
@@ -354,17 +339,15 @@ function getCurrentActivities(now) {
     }
 
 
-
     /*
-        Always display earliest start time first
+        Always display earliest start time first. Process catg="activity" before catg="routine" or "special"
     */
 
     matches.sort(
         (a,b) =>
+            a.catg.localeCompare(b.catg) ||
             a.start.localeCompare(b.start)
     );
-
-
 
     return matches;
 
@@ -378,6 +361,8 @@ function getCurrentActivities(now) {
 
     The activity's display-window start is:
         activity start time - lead time
+
+    Routine and special category activity entries will not be considered
 */
 
 function getUpcomingActivities(now) {
@@ -457,13 +442,13 @@ function getUpcomingActivities(now) {
             b.windowStart.getTime()
     );
 
-
     return matches;
 
 }
 
 /*
-    Get special page
+    Get special category activities. Usually will display a Web page generated for special events
+    Be aware that this will OVERRIDE all other scheduled messages
 */
 
 function getCurrentSpecialPages(now) {
@@ -536,8 +521,7 @@ function updateActivities(now) {
         Current activities take priority.
     */
 
-    const current =
-        getCurrentActivities(now);
+    const current = getCurrentActivities(now);
 
 
     if (current.length > 0) {
@@ -545,32 +529,35 @@ function updateActivities(now) {
         let html = "";
         let html1 = "";
 
-        current.forEach(activity => {
+        /* 
+           current.forEach(activity => {   Replace if you only want to process all activity. 
+           Ideally there should NEVER be entries in activities.json that have overlapping display windows as this does not
+           fit within small screens 
+        */
+        const activity = current[0];
+        
+        if (activity.speakAudio == true) {
+                speak(`${activity.audioline || ""} ${activity.status || ""}`);
+               }
+        const priority = activity.priority || "normal";
 
-            const priority =
-                activity.priority || "normal";
-
-            html += `
+        html += `
 
                 <div class="activityCard priority-${priority}">
 
                     <div class="activityText">
-
                         ${activity.text.replaceAll(";", "<br>")}
-
                     </div>
 
                 </div>
 
             `;
-            html1 += `
+        html1 += `
                      <div class="${activity.catg === "activity" ? "activityStatus" : "activityStatus green"}">
                          ${activity.catg === "activity" ? (activity.status || "") : "Just a Reminder"}
                      </div>
                     `;
-
-        });
-
+       
         container.innerHTML = html;
         container1.innerHTML = html1;
 
@@ -604,19 +591,9 @@ function updateActivities(now) {
         container.innerHTML = `
 
             <div class="activityCard priority-${priority}">
-
                 <div class="activityText">
-                    <br> 
-                    <strong>
-                        ${activity.title || ""}
-                    </strong>
-
-                    ${activity.text.replaceAll(";", "<br>")}
-
-                    <br>
-
+                    ${activity.text.replaceAll(";", "<br>")}                    
                 </div>
-
             </div>
 
         `;
@@ -639,14 +616,11 @@ function updateActivities(now) {
                 </div>
                 `;
 
-
 }
 
 
 /*
-    Main refresh routine
-
-    Runs every 30 seconds
+    Main refresh routine. Runs every 30 seconds
 */
 
 function refreshDisplay() {
@@ -663,10 +637,8 @@ function refreshDisplay() {
     const normalActivityPanel =
         document.getElementById("normalActivityPanel");
 
-
     const specialFrame =
         document.getElementById("specialFrame");
-
 
     /*
         If a special page is active, prepare it.
@@ -695,7 +667,6 @@ function refreshDisplay() {
 
         specialFrame.style.display = "none";
         normalActivityPanel.style.display = "block";
-
         updateActivities(now);
     }
 
@@ -710,9 +681,22 @@ function refreshDisplay() {
     document.getElementById("activityPanel").style.display =
         showClock ? "none" : "block";
 
-
     showClock = !showClock;
 }
+
+function speak(text) {
+  return new Promise((resolve, reject) => {
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "en-US";
+    utterance.onend = resolve;
+    utterance.onerror = reject;
+
+    speechSynthesis.speak(utterance);
+  });
+}
+
+
 function minutesSinceMidnight() {
     const now = new Date();
     return now.getHours() * 60 + now.getMinutes();
