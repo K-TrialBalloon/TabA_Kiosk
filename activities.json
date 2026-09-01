@@ -6,37 +6,10 @@
         "lag": 30,
         "priority": "normal",
         "catg": "routine",
-        "title": "Ready for Breakfast?",
-        "text": "Go have Breakfast; Ask for Porridge, Egg and Toast"
+        "text": "Have you had Breakfast?; Ask for Porridge, Egg and Toast"
     },
 
-
-    {
-        "type": "weekly",
-        "days": [2, 4],
-        "start": "10:30",
-        "lead": 20,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "title": "Exercises",
-        "text": "Hand Therapy in the Library; Someone will take you there."
-    },
-
-    {
-        "type": "weekly",
-        "days": [4],
-        "start": "18:00",
-        "lead": 20,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "title": "Evening programs for August at 6.00pm (Parlour)",
-        "text": "Aug 27 - Pub Night"
-    },
-
-
-
+    
     {
         "type": "daily",
         "start": "11:45",
@@ -44,186 +17,297 @@
         "lag": 15,
         "priority": "normal",
         "catg": "routine",
-        "title": "Ready for Lunch?",
-        "text": "Hungry? Go for Lunch; Not Hungry. ring bell to call Help; Ask to go back to bed"
+        "text": "Hungry? Go for Lunch; Not Hungry. Ring bell to call Help; Ask to go back to bed"
     },
 
     
     {
         "type": "daily",
-        "start": "17:00",
+        "start": "16:45",
         "lead": 15,
-        "lag": 15,
+        "lag": 30,
         "priority": "normal",
         "catg": "routine",
-        "title": "Tiffin Time",
-        "text": "Time for Evening snack - Horlicks and Biscuits;Karthik will be visiting"
+        "text": "Time for Evening snack;Horlicks and Biscuits;Karthik will be visiting"
     },
-
-
-    {
-        "type": "once",
-        "date": "2026-08-17",
-        "start": "18:30",
-        "lead": 20,
-        "lag": 10,
-        "priority": "normal",
-        "catg": "activity",
-        "title": "Music Event",
-        "text": "Mus-Art at the Courtyard"
-    },
-
     
-    {
-        "type": "once",
-        "date": "2026-08-24",
-        "start": "10:30",
-        "lead": 20,
-        "lag": 10,
-        "priority": "normal",
-        "catg": "activity",
-        "title": "Multiple Options",
-        "text": "Choose to go either for Choir or Men's Club"
-    },
 
-    
     {
         "type": "once",
-        "date": "2026-08-07",
+        "date": "2026-09-02",
         "start": "10:00",
-        "lead": 20,
-        "lag": 10,
+        "lead": 10,
+        "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "title": "Fun",
-        "text": "You be the Judge (Living Room)"
+        "audioline": "Cheema, Go for Brain Games in Great Hall. Activity ",
+        "text": "Brain Games at the Great Hall"
     },
+
 
     {
         "type": "once",
-        "date": "2026-08-07",
+        "date": "2026-09-02",
         "start": "11:00",
-        "lead": 20,
-        "lag": 10,
+        "lead": 10,
+        "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "title": "Exercise",
-        "text": "Go for Exercises (Great Hall)"
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Activity ",
+        "text": "Exercises at the Great Hall"
     },
+
 
     {
         "type": "once",
-        "date": "2026-08-14",
+        "date": "2026-09-03",
         "start": "10:30",
-        "lead": 20,
-        "lag": 10,
+        "lead": 10,
+        "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "title": "Fun",
-        "text": "Advanced Jeopardy (Great Hall)"
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "text": "Hand Therapy in the Library"
     },
 
     {
         "type": "once",
-        "date": "2026-08-14",
+        "date": "2026-09-04",
         "start": "11:00",
-        "lead": 20,
-        "lag": 10,
+        "lead": 10,
+        "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "title": "Exercise",
-        "text": "Go for Exercises (Great Hall)"
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Activity ",
+        "text": "Exercises at the Great Hall"
     },
 
     {
         "type": "once",
-        "date": "2026-08-21",
-        "start": "12:30",
-        "lead": 20,
-        "lag": 10,
+        "date": "2026-09-05",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "title": "Fun Event",
-        "text": "SUMMER CARNIVAL in Parlour"
+        "audioline": "Cheema, Go for Axe Throwing in the Great Hall. Activity ",
+        "text": "Axe Throwing at the Great Hall"
     },
 
-    
     {
         "type": "once",
-        "date": "2026-08-22",
-        "start": "14:30",
-        "lead": 15,
-        "lag": 90,
+        "date": "2026-09-08",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "text": "Hand Therapy in the Library"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-09",
+        "start": "10:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Bread Baking in the Living Room. Activity ",
+        "text": "Bread Baking in the Living Room; Choice: Brain Games in Great Hall"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-09",
+        "start": "11:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Activity ",
+        "text": "Exercises at the Great Hall"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-10",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "text": "Hand Therapy in the Library"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-11",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Music Therapy in the Living Room. Activity ",
+        "text": "Music Therapy in the Living Room"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-15",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "text": "Hand Therapy in the Library"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-16",
+        "start": "10:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Rhythm Band in Great Hall. Activity ",
+        "text": "Rhythm Band at the Great Hall"
+    },
+
+
+    {
+        "type": "once",
+        "date": "2026-09-16",
+        "start": "11:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Activity ",
+        "text": "Exercises at the Great Hall"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-17",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Drum Fit in the Great Hall. Activity ",
+        "text": "Drum Fit in the Great Hall; Another option: Hand Therapy in the Library"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-18",
+        "start": "10:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Short Stories in the Living Room. Activity ",
+        "text": "Short Stories in the Living Room"
+    },
+
+
+    {
+        "type": "once",
+        "date": "2026-09-18",
+        "start": "11:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Activity ",
+        "text": "Exercises at the Great Hall"
+    },    
+
+    {
+        "type": "once",
+        "date": "2026-09-22",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Craft in the Great Hall. Activity ",
+        "text": "Craft in the Great Hall; Another option: Hand Therapy in the Library"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-24",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "text": "Hand Therapy in the Library"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-25",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Music Therapy in the Living Room. Activity ",
+        "text": "Music Therapy in the Living Room"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-26",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Curling in the Great Hall. Activity ",
+        "text": "Curling in the Great Hall"
+    },
+   
+    {
+        "type": "once",
+        "date": "2026-09-28",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Classical Interlude in the Library. Activity ",
+        "text": "Classical Interlude in the Library"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-09-29",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "text": "Hand Therapy in the Library"
+    },
+ 
+    {
+        "type": "once",
+        "date": "2026-09-03",
+        "start": "10:00",
+        "lead": 30,
+        "lag": 20,
         "catg": "special",
-        "page": "birthday.html"
-    },
-
-
-    {
-        "type": "once",
-        "date": "2026-08-25",
-        "start": "10:30",
-        "lead": 20,
-        "lag": 10,
-        "priority": "normal",
-        "catg": "activity",
-        "title": "Fun Event",
-        "text": "Go for Curling (Great Hall)"
-    },
-
-    {
-        "type": "once",
-        "date": "2026-08-30",
-        "start": "11:33",
-        "lead": 3,
-        "lag": 2,
-        "priority": "normal",
-        "catg": "activity",
-        "title": "Some Event",
-        "audioline": "Cheema go for the Dummy event. Ring bell for help",
-        "text": "This is a Dummy event;This is another"
-    },
-
-    {
-        "type": "once",
-        "date": "2026-08-31",
-        "start": "17:55",
-        "lead": 15,
-        "lag": 3,
-        "priority": "normal",
-        "catg": "activity",
-        "audioline": "Cheema go for this routine activity",
-        "text": "Go out and enjoy the Garden. Activity "
-    },
-
-
-    {
-        "type": "weekly",
-        "days": [3],
-        "effectiveFrom": "2026-08-01",
-        "effectiveTo": "2026-08-31",
-        "start": "10:00",
-        "lead": 15,
-        "lag": 5,
-        "priority": "high",
-        "catg": "activity",
-        "title": "Fun Activity",
-        "text": "Go for Brain Games"
-    },
-
-    {
-        "type": "weekly",
-        "days": [3],
-        "effectiveFrom": "2026-08-01",
-        "effectiveTo": "2026-08-31",
-        "start": "11:00",
-        "lead": 15,
-        "lag": 5,
-        "priority": "high",
-        "catg": "activity",
-        "title": "Exercise",
-        "text": "Exercises at Great Hall"
+        "page": "/special/lunarbirthday92.html"
     }
-    
     
 ]
