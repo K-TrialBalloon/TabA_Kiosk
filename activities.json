@@ -299,6 +299,19 @@
         "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
         "text": "Hand Therapy in the Library"
     },
+
+    {
+        "type": "once",
+        "date": "2026-09-01",
+        "start": "18:00",
+        "lead": 10,
+        "lag": 10,
+        "catg": "activity",
+        "audioline": "Cheema, Go for this Dummy activity in the Library. Activity ",
+        "text": "Dummy in the Library"
+
+    }
+
  
     {
         "type": "once",
