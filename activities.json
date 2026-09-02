@@ -302,8 +302,8 @@
 
     {
         "type": "once",
-        "date": "2026-09-01",
-        "start": "22:45",
+        "date": "2026-09-02",
+        "start": "17:55",
         "lead": 10,
         "lag": 5,
         "catg": "activity",
