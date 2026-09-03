@@ -315,12 +315,12 @@
  
     {
         "type": "once",
-        "date": "2026-09-04",
-        "start": "10:00",
+        "date": "2026-09-03",
+        "start": "12:00",
         "lead": 30,
         "lag": 20,
         "catg": "special",
-        "page": "/special/lunarbirthday92.html"
+        "page": "main/special/lunarbirthday92.html"
     }
     
 ]
