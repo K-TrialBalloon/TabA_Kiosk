@@ -537,8 +537,7 @@ function updateActivities(now) {
         const activity = current[0];
         
         if (activity.speakAudio == true) {
-                /* speak(`${activity.audioline || ""} ${activity.status || ""}`); */
-                speak1("Hello");
+                speak(`${activity.audioline || ""} ${activity.status || ""}`); 
                }
         const priority = activity.priority || "normal";
 
@@ -748,9 +747,6 @@ function speak(text) {
   });
 }
 
-function speak1(text) {
-    alert("fully = " + typeof fully);
-}
 
 /*
     Start application

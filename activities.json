@@ -303,7 +303,7 @@
     {
         "type": "once",
         "date": "2026-09-03",
-        "start": "09:55",
+        "start": "10:12",
         "lead": 10,
         "lag": 5,
         "catg": "activity",
