@@ -736,7 +736,11 @@ function updateOverlay() {
 }
 
 function testTTS() {
-    alert("JavaScript is working!");
+    alert("1 - JavaScript works");
+
+    alert("2 - speechSynthesis = " + typeof speechSynthesis);
+
+    alert("3 - Utterance = " + typeof SpeechSynthesisUtterance);
 }
 
 /*
