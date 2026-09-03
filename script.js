@@ -315,14 +315,15 @@ function getCurrentActivities(now) {
             
             speakAudio = false;
             /* We want to provide audio feedback only when the message display is active and only for messages
-               with an audioline that are within 8 to 3 mins of the actual entry sart time */
+               with an audioline that are within 8 to 3 mins of the actual entry start time */
             
             if (AUDIO === 'ON' && 
                 showClock !== true && 
                 Object.hasOwn(activity, 'audioline') && 
-                difference <= 8 && 
+                difference <= 5 && 
                 difference >= 3) {
                 speakAudio = true;
+                console.log("Setting speakaudio to true")
                 }
 
             matches.push({
