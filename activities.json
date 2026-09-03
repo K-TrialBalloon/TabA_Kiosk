@@ -303,7 +303,7 @@
     {
         "type": "once",
         "date": "2026-09-03",
-        "start": "10:12",
+        "start": "12:22",
         "lead": 10,
         "lag": 5,
         "catg": "activity",
@@ -318,7 +318,7 @@
         "date": "2026-09-03",
         "start": "12:00",
         "lead": 30,
-        "lag": 20,
+        "lag": 10,
         "catg": "special",
         "page": "special/lunarbirthday92.html"
     }
