@@ -303,11 +303,11 @@
     {
         "type": "once",
         "date": "2026-09-03",
-        "start": "12:22",
+        "start": "12:40",
         "lead": 10,
         "lag": 5,
         "catg": "activity",
-        "audioline": "Cheema, Go for this Dummy activity in the Library. Activity ",
+        "audioline": "Cheema, Go for Musical Interlude in the Great Hall. Activity ",
         "text": "Dummy in the Library"
 
     },
@@ -316,7 +316,7 @@
     {
         "type": "once",
         "date": "2026-09-03",
-        "start": "12:00",
+        "start": "12:20",
         "lead": 30,
         "lag": 10,
         "catg": "special",
