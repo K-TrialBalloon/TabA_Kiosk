@@ -736,66 +736,32 @@ function updateOverlay() {
 }
 
 function testTTS() {
-    console.log("=== TTS TEST ===");
+    var msg = new SpeechSynthesisUtterance(
+        "This is a test of text to speech."
+    );
 
-    console.log("speechSynthesis:", window.speechSynthesis);
-    console.log("SpeechSynthesisUtterance:", window.SpeechSynthesisUtterance);
-
-    var voices = speechSynthesis.getVoices();
-
-    console.log("voices:", voices.length);
-
-    voices.forEach(function(v, i) {
-        console.log(
-            i,
-            v.name,
-            v.lang,
-            "default=" + v.default,
-            "local=" + v.localService
-        );
-    });
-
-    var msg = new SpeechSynthesisUtterance("This is a test of text to speech.");
     msg.lang = "en-US";
-    msg.volume = 1.0;
-    msg.rate = 1.0;
-    msg.pitch = 1.0;
+    msg.volume = 1;
+    msg.rate = 1;
+    msg.pitch = 1;
 
     msg.onstart = function () {
-        console.log(">>> TTS START");
+        alert("TTS STARTED");
     };
 
     msg.onend = function () {
-        console.log(">>> TTS END");
+        alert("TTS FINISHED");
     };
 
     msg.onerror = function (event) {
-        console.log(">>> TTS ERROR", event);
-        console.log("error =", event.error);
-    };
-
-    msg.onpause = function () {
-        console.log(">>> TTS PAUSE");
-    };
-
-    msg.onresume = function () {
-        console.log(">>> TTS RESUME");
+        alert("TTS ERROR: " + event.error);
     };
 
     speechSynthesis.cancel();
 
-    setTimeout(function () {
-        console.log("Calling speak()");
-        speechSynthesis.speak(msg);
-        console.log(
-            "speaking=",
-            speechSynthesis.speaking,
-            "pending=",
-            speechSynthesis.pending,
-            "paused=",
-            speechSynthesis.paused
-        );
-    }, 100);
+    alert("Calling speechSynthesis.speak()");
+
+    speechSynthesis.speak(msg);
 }
 
 /*
