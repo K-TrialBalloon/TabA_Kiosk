@@ -736,32 +736,7 @@ function updateOverlay() {
 }
 
 function testTTS() {
-    var msg = new SpeechSynthesisUtterance(
-        "This is a test of text to speech."
-    );
-
-    msg.lang = "en-US";
-    msg.volume = 1;
-    msg.rate = 1;
-    msg.pitch = 1;
-
-    msg.onstart = function () {
-        alert("TTS STARTED");
-    };
-
-    msg.onend = function () {
-        alert("TTS FINISHED");
-    };
-
-    msg.onerror = function (event) {
-        alert("TTS ERROR: " + event.error);
-    };
-
-    speechSynthesis.cancel();
-
-    alert("Calling speechSynthesis.speak()");
-
-    speechSynthesis.speak(msg);
+    alert("JavaScript is working!");
 }
 
 /*
