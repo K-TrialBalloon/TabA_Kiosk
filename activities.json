@@ -303,12 +303,12 @@
     {
         "type": "once",
         "date": "2026-09-03",
-        "start": "12:40",
+        "start": "12:55",
         "lead": 10,
         "lag": 5,
         "catg": "activity",
         "audioline": "Cheema, Go for Musical Interlude in the Great Hall. Activity ",
-        "text": "Dummy in the Library"
+        "text": "Mus Interlude in Great Hall"
 
     },
 
