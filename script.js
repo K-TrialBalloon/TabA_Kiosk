@@ -753,8 +753,19 @@ function speak(text) {
     Start application
 */
 
-loadActivities(0.5);
-setInterval(
-    refreshDisplay,
-    30000
-);
+function startApp() {
+
+    loadActivities(0.5);
+    setInterval(
+        refreshDisplay,
+         30000
+    );
+}
+
+document.getElementById('startBtn').addEventListener('click', function() {
+    this.style.display = 'none'; // Hide button after click
+    console.log("Audio and scheduler initialized.");
+
+    // Start your background interval timer
+    startApp();
+});
