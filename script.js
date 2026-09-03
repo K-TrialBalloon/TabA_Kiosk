@@ -736,11 +736,34 @@ function updateOverlay() {
 }
 
 function testTTS() {
-    alert("1 - JavaScript works");
+    alert("Starting TTS test");
 
-    alert("2 - speechSynthesis = " + typeof speechSynthesis);
+    var msg = new SpeechSynthesisUtterance(
+        "This is a test of text to speech."
+    );
 
-    alert("3 - Utterance = " + typeof SpeechSynthesisUtterance);
+    msg.lang = "en-US";
+    msg.volume = 1.0;
+    msg.rate = 1.0;
+    msg.pitch = 1.0;
+
+    msg.onstart = function () {
+        alert("TTS STARTED");
+    };
+
+    msg.onend = function () {
+        alert("TTS FINISHED");
+    };
+
+    msg.onerror = function (event) {
+        alert("TTS ERROR: " + event.error);
+    };
+
+    speechSynthesis.cancel();
+
+    alert("Calling speak()");
+
+    speechSynthesis.speak(msg);
 }
 
 /*
