@@ -537,7 +537,8 @@ function updateActivities(now) {
         const activity = current[0];
         
         if (activity.speakAudio == true) {
-                speak(`${activity.audioline || ""} ${activity.status || ""}`);
+                /* speak(`${activity.audioline || ""} ${activity.status || ""}`); */
+                speak1("Hello");
                }
         const priority = activity.priority || "normal";
 
@@ -735,53 +736,20 @@ function updateOverlay() {
     document.getElementById("nightOverlay").style.opacity = calculateOpacity();
 }
 
-function testTTS() {
-    alert("1 - Function started");
+function speak(text) {
+  return new Promise((resolve, reject) => {
+    const utterance = new SpeechSynthesisUtterance(text);
 
-    try {
-        alert("2 - Creating utterance");
+    utterance.lang = "en-US";
+    utterance.onend = resolve;
+    utterance.onerror = reject;
 
-        var msg = new SpeechSynthesisUtterance("Hello");
+    speechSynthesis.speak(utterance);
+  });
+}
 
-        alert("3 - Utterance created");
-
-        msg.lang = "en-US";
-        alert("4 - Language set");
-
-        msg.volume = 1.0;
-        alert("5 - Volume set");
-
-        msg.rate = 1.0;
-        alert("6 - Rate set");
-
-        msg.pitch = 1.0;
-        alert("7 - Pitch set");
-
-        msg.onstart = function () {
-            alert("8 - TTS STARTED");
-        };
-
-        msg.onend = function () {
-            alert("9 - TTS FINISHED");
-        };
-
-        msg.onerror = function (event) {
-            alert("TTS ERROR: " + event.error);
-        };
-
-        alert("10 - Calling speechSynthesis.cancel()");
-
-        speechSynthesis.cancel();
-
-        alert("11 - Calling speechSynthesis.speak()");
-
-        speechSynthesis.speak(msg);
-
-        alert("12 - speak() returned");
-    }
-    catch (e) {
-        alert("EXCEPTION: " + e.name + " - " + e.message);
-    }
+function speak1(text) {
+    alert("fully = " + typeof fully);
 }
 
 /*
