@@ -302,13 +302,26 @@
 
     {
         "type": "once",
-        "date": "2026-09-03",
-        "start": "17:55",
+        "date": "2026-09-04",
+        "start": "17:45",
         "lead": 10,
         "lag": 5,
         "catg": "activity",
         "audioline": "Cheema, Go for Musical Interlude in the Great Hall. Activity ",
         "text": "Mus Interlude in Great Hall"
+
+    },
+
+   
+    {
+        "type": "once",
+        "date": "2026-09-04",
+        "start": "18:00",
+        "lead": 10,
+        "lag": 5,
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the library. Activity ",
+        "text": "Hand Therapy in the Library"
 
     },
 
