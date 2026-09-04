@@ -303,7 +303,7 @@
     {
         "type": "once",
         "date": "2026-09-04",
-        "start": "17:45",
+        "start": "18:30",
         "lead": 10,
         "lag": 5,
         "catg": "activity",
@@ -316,7 +316,7 @@
     {
         "type": "once",
         "date": "2026-09-04",
-        "start": "18:20",
+        "start": "18:45",
         "lead": 10,
         "lag": 5,
         "catg": "activity",
