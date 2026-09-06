@@ -316,9 +316,8 @@ function getCurrentActivities(now) {
             speakAudio = false;
             /* We want to provide audio feedback only when the message display is active and only for messages
                with an audioline that are within 8 to 3 mins of the actual entry start time */
-            
+            /* showClock !== true && */
             if (AUDIO === 'ON' && 
-                showClock !== true && 
                 Object.hasOwn(activity, 'audioline') && 
                 difference <= 5 && 
                 difference >= 3) {
@@ -743,6 +742,7 @@ function speak(text) {
     utterance.lang = "en-US";
     utterance.onend = resolve;
     utterance.onerror = reject;
+    utterance.rate = 0.6;
 
     speechSynthesis.speak(utterance);
   });
