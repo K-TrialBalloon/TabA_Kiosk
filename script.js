@@ -76,12 +76,12 @@ function updateClock(now) {
     const month =
         now.toLocaleDateString(
             "en-US",
-            { month:"long" }
+            { month:"short" }
         );
 
 
     document.getElementById("dateHeading").innerHTML =
-    `${weekday} - ${month} ${now.getDate()}<br>${now.getFullYear()}<br>`;
+    `${weekday}<br> ${month} ${now.getDate()} - ${now.getFullYear()}<br>`;
 
 
     const hour = now.getHours();
@@ -94,31 +94,31 @@ function updateClock(now) {
 
     if (hour >= 5 && hour < 12) {
 
-        period = "morning";
+        period = "Morning";
 
     }
 
     else if (hour >= 12 && hour < 16) {
 
-        period = "afternoon";
+        period = "Afternoon";
 
     }
 
     else if (hour >= 16 && hour < 20) {
 
-        period = "evening";
+        period = "Evening";
 
     }
 
     else {
 
-        period = "night";
+        period = "Night";
 
     }
 
 
     document.getElementById("timeHeading").textContent =
-        `${hour12}:${String(minute).padStart(2,"0")} in the ${period}`;
+        `${hour12}:${String(minute).padStart(2,"0")} - ${period}`;
 
 }
 

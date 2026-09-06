@@ -315,13 +315,13 @@
    
     {
         "type": "once",
-        "date": "2026-09-05",
-        "start": "18:00",
+        "date": "2026-09-06",
+        "start": "17:55",
         "lead": 10,
         "lag": 5,
         "catg": "activity",
-        "audioline": "Cheema, Go for Hand Therapy in the library. Activity ",
-        "text": "Hand Therapy in the Library"
+        "audioline": "Cheema, Go for Axe throwing in Parlour. Ring bell if you need help. Activity ",
+        "text": "Axe Throwing in the Parlour"
 
     },
 
