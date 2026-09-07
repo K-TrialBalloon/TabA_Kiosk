@@ -81,7 +81,7 @@ function updateClock(now) {
 
 
     document.getElementById("dateHeading").innerHTML =
-    `${weekday}<br> ${month} ${now.getDate()} - ${now.getFullYear()}<br>`;
+    `${weekday}<br><br> ${month} ${now.getDate()} - ${now.getFullYear()}<br><br>`;
 
 
     const hour = now.getHours();
@@ -354,7 +354,7 @@ function getCurrentActivities(now) {
 }
 
 /*
-    Find the next upcoming activity
+    Find the next upcoming activity.        CURRENTLY DISABLED AS USE LIMITED
 
     An activity is considered upcoming when its display-window
     start time is no more than UPCOMING_MINUTES in the future.
@@ -570,8 +570,8 @@ function updateActivities(now) {
         Check for an upcoming activity.
     */
 
-    const upcoming =
-        getUpcomingActivities(now);
+    /* const upcoming = getUpcomingActivities(now);              DISABLED FOR NOW */
+    let upcoming = [];
 
 
     if (upcoming.length > 0) {

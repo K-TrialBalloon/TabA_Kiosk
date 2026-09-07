@@ -40,7 +40,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Brain Games in Great Hall. Activity ",
+        "audioline": "Cheema, Go for Brain Games in Great Hall. Ring bell if you need help. Activity ",
         "text": "Brain Games at the Great Hall"
     },
 
@@ -53,7 +53,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Exercises in the Great Hall. Activity ",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
         "text": "Exercises at the Great Hall"
     },
 
@@ -102,7 +102,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
         "text": "Hand Therapy in the Library"
     },
 
@@ -114,7 +114,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Bread Baking in the Living Room. Activity ",
+        "audioline": "Cheema, Go for Bread Baking in the Living Room. Ring bell if you need help. Activity ",
         "text": "Bread Baking in the Living Room; Choice: Brain Games in Great Hall"
     },
 
@@ -126,7 +126,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Exercises in the Great Hall. Activity ",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
         "text": "Exercises at the Great Hall"
     },
 
@@ -138,7 +138,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
         "text": "Hand Therapy in the Library"
     },
 
@@ -150,7 +150,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Music Therapy in the Living Room. Activity ",
+        "audioline": "Cheema, Go for Music Therapy in the Living Room. Ring bell if you need help. Activity ",
         "text": "Music Therapy in the Living Room"
     },
 
@@ -162,7 +162,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
         "text": "Hand Therapy in the Library"
     },
 
@@ -174,7 +174,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Rhythm Band in Great Hall. Activity ",
+        "audioline": "Cheema, Go for Rhythm Band in Great Hall. Ring bell if you need help. Activity ",
         "text": "Rhythm Band at the Great Hall"
     },
 
@@ -187,7 +187,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Exercises in the Great Hall. Activity ",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
         "text": "Exercises at the Great Hall"
     },
 
@@ -199,7 +199,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Drum Fit in the Great Hall. Activity ",
+        "audioline": "Cheema, Go for Drum Fit in the Great Hall. Ring bell if you need help. Activity ",
         "text": "Drum Fit in the Great Hall; Another option: Hand Therapy in the Library"
     },
 
@@ -211,7 +211,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Short Stories in the Living Room. Activity ",
+        "audioline": "Cheema, Go for Short Stories in the Living Room. Ring bell if you need help. Activity ",
         "text": "Short Stories in the Living Room"
     },
 
@@ -224,7 +224,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Exercises in the Great Hall. Activity ",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
         "text": "Exercises at the Great Hall"
     },    
 
@@ -236,7 +236,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Craft in the Great Hall. Activity ",
+        "audioline": "Cheema, Go for Craft in the Great Hall. Ring bell if you need help. Activity ",
         "text": "Craft in the Great Hall; Another option: Hand Therapy in the Library"
     },
 
@@ -248,7 +248,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
         "text": "Hand Therapy in the Library"
     },
 
@@ -260,7 +260,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Music Therapy in the Living Room. Activity ",
+        "audioline": "Cheema, Go for Music Therapy in the Living Room. Ring bell if you need help. Activity ",
         "text": "Music Therapy in the Living Room"
     },
 
@@ -272,7 +272,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Curling in the Great Hall. Activity ",
+        "audioline": "Cheema, Go for Curling in the Great Hall. Ring bell if you need help. Activity ",
         "text": "Curling in the Great Hall"
     },
    
@@ -284,7 +284,7 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Classical Interlude in the Library. Activity ",
+        "audioline": "Cheema, Go for Classical Interlude in the Library. Ring bell if you need help. Activity ",
         "text": "Classical Interlude in the Library"
     },
 
@@ -296,36 +296,22 @@
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Hand Therapy in the Library. Activity ",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
         "text": "Hand Therapy in the Library"
     },
 
     {
         "type": "once",
-        "date": "2026-09-05",
-        "start": "17:45",
-        "lead": 8,
-        "lag": 5,
-        "catg": "activity",
-        "audioline": "Cheema, Go for Musical Interlude in the Great Hall. Activity ",
-        "text": "Mus Interlude in Great Hall"
-
-    },
-
-   
-    {
-        "type": "once",
-        "date": "2026-09-06",
+        "date": "2026-09-07",
         "start": "17:55",
-        "lead": 10,
+        "lead": 15,
         "lag": 5,
         "catg": "activity",
-        "audioline": "Cheema, Go for Axe throwing in Parlour. Ring bell if you need help. Activity ",
-        "text": "Axe Throwing in the Parlour"
+        "audioline": "Cheema, This is a test. Ring bell if you need help. Activity ",
+        "text": "This is a TEST activity"
 
     },
-
- 
+        
     {
         "type": "once",
         "date": "2026-09-03",
