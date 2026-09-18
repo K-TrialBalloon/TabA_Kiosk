@@ -302,13 +302,13 @@
 
     {
         "type": "once",
-        "date": "2026-09-07",
-        "start": "17:55",
-        "lead": 15,
-        "lag": 5,
+        "date": "2026-09-18",
+        "start": "17:45",
+        "lead": 6,
+        "lag": 2,
         "catg": "activity",
-        "audioline": "Cheema, This is a test. Ring bell if you need help. Activity ",
-        "text": "This is a TEST activity"
+        "audioline": "Cheema, Clear your mind. We will chant Vishnu Sahasranamam. Activity ",
+        "text": "Time for Vishnu Saharanamam"
 
     },
         
