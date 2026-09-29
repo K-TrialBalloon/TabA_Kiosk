@@ -81,7 +81,7 @@ function updateClock(now) {
 
 
     document.getElementById("dateHeading").innerHTML =
-    `${weekday}<br><br> ${month} ${now.getDate()} - ${now.getFullYear()}<br><br>`;
+    `${weekday}<br> ${month} ${now.getDate()} - ${now.getFullYear()}<br>`;
 
 
     const hour = now.getHours();
