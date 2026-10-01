@@ -85,19 +85,19 @@
 
     {
         "type": "once",
-        "date": "2026-09-09",
+        "date": "2026-10-07",
         "start": "10:00",
         "lead": 10,
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Bread Baking in the Living Room. Ring bell if you need help. Activity ",
-        "text": "Bread Baking in the Living Room; Choice: Brain Games in Great Hall"
+        "audioline": "Cheema, Go for Brain Games in the Great Hall. Ring bell if you need help. Activity ",
+        "text": "Brain Games in Great Hall"
     },
 
     {
         "type": "once",
-        "date": "2026-09-09",
+        "date": "2026-10-07",
         "start": "11:00",
         "lead": 10,
         "lag": 5,
@@ -109,7 +109,106 @@
 
     {
         "type": "once",
-        "date": "2026-09-10",
+        "date": "2026-10-08",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
+        "text": "Hand Therapy in the Library"
+    },
+
+    
+    {
+        "type": "once",
+        "date": "2026-10-13",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
+        "text": "Hand Therapy in the Library"
+    },
+
+    
+    {
+        "type": "once",
+        "date": "2026-10-14",
+        "start": "11:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
+        "text": "Exercises at the Great Hall"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-10-15",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
+        "text": "Hand Therapy in the Library"
+    },
+
+    
+    {
+        "type": "once",
+        "date": "2026-10-16",
+        "start": "11:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
+        "text": "Exercises at the Great Hall"
+    },  
+
+    {
+        "type": "once",
+        "date": "2026-10-17",
+        "start": "09:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Walk and Talk in the Library. Ring bell if you need help. Activity ",
+        "text": "Walk and Talk in the Library"
+    },  
+
+    {
+        "type": "once",
+        "date": "2026-10-17",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Bean Bag Toss in the Great Hall. Ring bell if you need help. Activity ",
+        "text": "Bean Bag toss at the Great Hall"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-10-19",
+        "start": "11:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Exercises in the Parlor. Ring bell if you need help. Activity ",
+        "text": "Exercises in the Parlor"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-10-20",
         "start": "10:30",
         "lead": 10,
         "lag": 5,
@@ -121,105 +220,80 @@
 
     {
         "type": "once",
-        "date": "2026-09-11",
-        "start": "10:30",
-        "lead": 10,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "audioline": "Cheema, Go for Music Therapy in the Living Room. Ring bell if you need help. Activity ",
-        "text": "Music Therapy in the Living Room"
-    },
-
-    {
-        "type": "once",
-        "date": "2026-09-15",
-        "start": "10:30",
-        "lead": 10,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
-        "text": "Hand Therapy in the Library"
-    },
-
-    {
-        "type": "once",
-        "date": "2026-09-16",
+        "date": "2026-10-21",
         "start": "10:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Brain Games in the Great Hall. Ring bell if you need help. Activity ",
+        "text": "Brain Games in Great Hall"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-10-21",
+        "start": "11:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
+        "text": "Exercises at the Great Hall"
+    },
+
+
+    {
+        "type": "once",
+        "date": "2026-10-22",
+        "start": "10:30",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
+        "text": "Hand Therapy in the Library"
+    },
+
+    {
+        "type": "once",
+        "date": "2026-10-26",
+        "start": "10:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for You be the Judge in the library. Ring bell if you need help. Activity ",
+        "text": "You be the Judge in the Great Hall"
+    },
+   
+    {
+        "type": "once",
+        "date": "2026-10-26",
+        "start": "10:30",
         "lead": 10,
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
         "audioline": "Cheema, Go for Rhythm Band in Great Hall. Ring bell if you need help. Activity ",
-        "text": "Rhythm Band at the Great Hall"
-    },
-
-
-    {
-        "type": "once",
-        "date": "2026-09-16",
-        "start": "11:00",
-        "lead": 10,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
-        "text": "Exercises at the Great Hall"
+        "text": "Rhythm Band in Great Hall"
     },
 
     {
         "type": "once",
-        "date": "2026-09-17",
+        "date": "2026-10-27",
         "start": "10:30",
         "lead": 10,
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Drum Fit in the Great Hall. Ring bell if you need help. Activity ",
-        "text": "Drum Fit in the Great Hall; Another option: Hand Therapy in the Library"
+        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
+        "text": "Hand Therapy in the Library;Another option is Jeopardy in Great Hall"
     },
 
     {
         "type": "once",
-        "date": "2026-09-18",
-        "start": "10:00",
-        "lead": 10,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "audioline": "Cheema, Go for Short Stories in the Living Room. Ring bell if you need help. Activity ",
-        "text": "Short Stories in the Living Room"
-    },
-
-
-    {
-        "type": "once",
-        "date": "2026-09-18",
-        "start": "11:00",
-        "lead": 10,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
-        "text": "Exercises at the Great Hall"
-    },    
-
-    {
-        "type": "once",
-        "date": "2026-09-22",
-        "start": "10:30",
-        "lead": 10,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "audioline": "Cheema, Go for Craft in the Great Hall. Ring bell if you need help. Activity ",
-        "text": "Craft in the Great Hall; Another option: Hand Therapy in the Library"
-    },
-
-    {
-        "type": "once",
-        "date": "2026-09-24",
+        "date": "2026-10-29",
         "start": "10:30",
         "lead": 10,
         "lag": 5,
@@ -231,61 +305,37 @@
 
     {
         "type": "once",
-        "date": "2026-09-25",
+        "date": "2026-10-30",
         "start": "10:30",
         "lead": 10,
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Music Therapy in the Living Room. Ring bell if you need help. Activity ",
-        "text": "Music Therapy in the Living Room"
+        "audioline": "Cheema, Go for Music Therapy in the Library. Ring bell if you need help. Activity ",
+        "text": "Music Therapy in the Library"
     },
 
     {
-        "type": "once",
-        "date": "2026-09-26",
-        "start": "10:30",
-        "lead": 10,
+        "type": "weekly",
+        "days": [4],
+        "start": "18:00",
+        "lead": 20,
         "lag": 5,
         "priority": "normal",
         "catg": "activity",
-        "audioline": "Cheema, Go for Curling in the Great Hall. Ring bell if you need help. Activity ",
-        "text": "Curling in the Great Hall"
-    },
-   
-    {
-        "type": "once",
-        "date": "2026-09-28",
-        "start": "10:30",
-        "lead": 10,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "audioline": "Cheema, Go for Classical Interlude in the Library. Ring bell if you need help. Activity ",
-        "text": "Classical Interlude in the Library"
-    },
-
-    {
-        "type": "once",
-        "date": "2026-09-29",
-        "start": "10:30",
-        "lead": 10,
-        "lag": 5,
-        "priority": "normal",
-        "catg": "activity",
-        "audioline": "Cheema, Go for Hand Therapy in the Library. Ring bell if you need help. Activity ",
-        "text": "Hand Therapy in the Library"
+        "audioline": "Cheema, Go for Event in the Parlor. Ring bell if you need help. Activity ",
+        "text": "Oct 1 is Bingo;Oct 8 is Pub Night;Oct 15 is Trivia Night;Oct 22 is Bocce Ball"
     },
 
             
     {
         "type": "once",
-        "date": "2026-09-03",
-        "start": "12:20",
+        "date": "2026-10-30",
+        "start": "12:00",
         "lead": 30,
-        "lag": 10,
+        "lag": 30,
         "catg": "special",
-        "page": "special/lunarbirthday92.html"
+        "page": "special/halloween_animation.html"
     }
     
 ]
