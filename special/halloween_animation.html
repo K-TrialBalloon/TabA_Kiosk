@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Haunted Halloween Night</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#090414}
+  body{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+  .scene{position:relative;width:100%;height:100%;overflow:hidden;
+    background:
+      radial-gradient(circle at 70% 24%,rgba(255,171,61,.12),transparent 17%),
+      radial-gradient(circle at 50% 100%,#28102e 0,#10091d 48%,#05030d 100%);
+  }
+  .moon{position:absolute;width:150px;height:150px;border-radius:50%;right:12%;top:8%;
+    background:radial-gradient(circle at 36% 34%,#fff9d5 0 4%,#ffe9a6 25%,#ffcc72 68%,#e8a34d 100%);
+    box-shadow:0 0 35px #ffb74d55,0 0 100px #ff8c2a22;animation:moon 7s ease-in-out infinite}
+  .crater{position:absolute;border-radius:50%;background:#d89449;opacity:.35}
+  .c1{width:22px;height:14px;left:33px;top:42px}.c2{width:14px;height:14px;left:92px;top:28px}
+  .c3{width:28px;height:18px;left:75px;top:88px}.c4{width:11px;height:11px;left:45px;top:105px}
+  @keyframes moon{50%{transform:translateY(-5px);filter:brightness(1.08)}}
+  .stars{position:absolute;inset:0;background-image:
+    radial-gradient(circle,#fff 0 1px,transparent 1.5px),
+    radial-gradient(circle,#ffd9a0 0 1px,transparent 1.5px);
+    background-size:97px 83px,143px 127px;background-position:12px 8px,43px 27px;opacity:.65;animation:twinkle 3s infinite alternate}
+  @keyframes twinkle{to{opacity:.28}}
+  .cloud{position:absolute;width:280px;height:55px;background:#160d27;border-radius:50%;opacity:.75;filter:blur(2px);animation:drift 22s linear infinite}
+  .cloud:before,.cloud:after{content:"";position:absolute;background:#160d27;border-radius:50%}
+  .cloud:before{width:100px;height:80px;left:45px;bottom:-5px}.cloud:after{width:135px;height:90px;right:30px;bottom:-8px}
+  .cloud.a{top:21%;left:-320px}.cloud.b{top:34%;left:-500px;transform:scale(.7);animation-duration:31s;animation-delay:-10s}
+  @keyframes drift{to{transform:translateX(calc(100vw + 900px))}}
+  .hill{position:absolute;bottom:0;width:100%;height:32%;background:#0b0715;clip-path:polygon(0 44%,8% 34%,15% 46%,25% 25%,34% 45%,43% 30%,52% 50%,63% 28%,73% 43%,83% 20%,92% 42%,100% 29%,100% 100%,0 100%)}
+  .graveyard{position:absolute;bottom:12%;left:0;width:100%;height:25%}
+  .grave{position:absolute;bottom:0;width:38px;height:64px;border-radius:20px 20px 4px 4px;background:#171020;border:2px solid #251832;box-shadow:0 0 10px #000}
+  .grave:after{content:"";position:absolute;left:17px;top:17px;width:4px;height:26px;background:#2b1d36;box-shadow:-7px 11px #2b1d36,7px 11px #2b1d36}
+  .g1{left:8%;transform:rotate(-5deg)}.g2{left:21%;height:45px}.g3{left:77%;height:55px;transform:rotate(4deg)}.g4{left:89%;height:72px}
+  .pumpkin{position:absolute;bottom:9%;left:50%;width:115px;height:82px;transform:translateX(-50%);border-radius:45% 45% 48% 48%;
+    background:linear-gradient(90deg,#8d2e0d,#ff6b12 35%,#d8430d 70%,#7e250d);
+    box-shadow:0 8px 25px #0008;animation:bob 2.7s ease-in-out infinite}
+  .pumpkin:before,.pumpkin:after{content:"";position:absolute;top:-4px;width:44px;height:76px;border-radius:50%;border:2px solid #8f300f55}
+  .pumpkin:before{left:20px}.pumpkin:after{right:20px}
+  .stem{position:absolute;z-index:2;left:51px;top:-16px;width:13px;height:23px;border-radius:5px;background:#3c5d25;transform:rotate(8deg)}
+  .eye{position:absolute;top:28px;width:24px;height:18px;background:#ffd33d;clip-path:polygon(0 0,100% 15%,75% 100%,20% 85%);filter:drop-shadow(0 0 8px #ffb300)}
+  .eye.l{left:22px;transform:rotate(8deg)}.eye.r{right:22px;transform:scaleX(-1) rotate(8deg)}
+  .mouth{position:absolute;left:29px;bottom:14px;width:57px;height:22px;border-bottom:8px solid #ffd33d;border-radius:0 0 50% 50%;filter:drop-shadow(0 0 7px #ff9d00)}
+  .mouth i{display:block;position:absolute;width:5px;height:8px;background:#3a1809;left:15px;bottom:-7px;box-shadow:17px 0 #3a1809,34px 0 #3a1809}
+  @keyframes bob{50%{transform:translateX(-50%) translateY(-7px)}}
+  .bat{position:absolute;width:70px;height:35px;top:18%;left:-100px;animation:fly 10s linear infinite}
+  .bat:before,.bat:after{content:"";position:absolute;top:8px;width:36px;height:23px;background:#05030b;border-radius:100% 0 100% 0}
+  .bat:before{right:34px;transform:skewY(18deg)}.bat:after{left:34px;transform:scaleX(-1) skewY(18deg)}
+  .bat b{position:absolute;z-index:2;left:30px;top:7px;width:11px;height:25px;background:#05030b;border-radius:50%}
+  @keyframes fly{0%{left:-100px;top:20%;transform:scale(.7)}45%{top:12%;transform:scale(1)}100%{left:110%;top:24%;transform:scale(.8)}}
+  .ghost{position:absolute;right:7%;bottom:25%;width:80px;height:105px;background:#eeeaf8;border-radius:50% 50% 12px 12px;opacity:0;filter:drop-shadow(0 0 12px #b9b4ff88);animation:ghost 8s ease-in-out infinite}
+  .ghost:before{content:"";position:absolute;left:18px;top:30px;width:11px;height:18px;background:#21152c;border-radius:50%;box-shadow:34px 0 #21152c}
+  .ghost:after{content:"";position:absolute;left:34px;top:58px;width:12px;height:18px;background:#21152c;border-radius:50%}
+  @keyframes ghost{0%,100%{opacity:0;transform:translateY(15px)}25%,70%{opacity:.65;transform:translateY(-10px)}}
+  .fog{position:absolute;left:-10%;bottom:9%;width:120%;height:100px;background:radial-gradient(ellipse at center,rgba(180,164,210,.12),transparent 68%);filter:blur(12px);animation:fog 9s ease-in-out infinite alternate}
+  @keyframes fog{to{transform:translateX(4%);opacity:.7}}
+  .title{position:absolute;left:50%;top:7%;transform:translateX(-50%);text-align:center;color:#ffb52e;
+    text-shadow:0 0 12px #ff6d00,0 0 35px #ff4d0055;letter-spacing:.16em;font-weight:900;font-size:clamp(25px,5vw,64px);animation:title 2.5s ease-in-out infinite alternate}
+  .subtitle{font-size:clamp(10px,1.2vw,15px);letter-spacing:.38em;color:#d9c8e8;margin-top:5px}
+  @keyframes title{to{text-shadow:0 0 18px #ffb300,0 0 50px #ff4d0088;transform:translateX(-50%) scale(1.015)}}
+  .hint{position:absolute;bottom:3%;left:50%;transform:translateX(-50%);color:#8f819f;font-size:12px;letter-spacing:.12em}
+  @media(max-width:600px){.moon{width:100px;height:100px}.pumpkin{bottom:11%}.ghost{right:2%}.graveyard{bottom:14%}}
+</style>
+</head>
+<body>
+<div class="scene" aria-label="Animated Halloween night scene">
+  <div class="stars"></div><div class="moon"><i class="crater c1"></i><i class="crater c2"></i><i class="crater c3"></i><i class="crater c4"></i></div>
+  <div class="cloud a"></div><div class="cloud b"></div>
+  <div class="title">HAPPY HALLOWEEN<div class="subtitle">A HAUNTED NIGHT</div></div>
+  <div class="bat"><b></b></div><div class="ghost"></div>
+  <div class="hill"></div>
+  <div class="graveyard"><div class="grave g1"></div><div class="grave g2"></div><div class="grave g3"></div><div class="grave g4"></div></div>
+  <div class="pumpkin"><div class="stem"></div><div class="eye l"></div><div class="eye r"></div><div class="mouth"><i></i></div></div>
+  <div class="fog"></div><div class="hint">TURN DOWN THE LIGHTS • ENJOY THE NIGHT</div>
+</div>
+</body>
+</html>
