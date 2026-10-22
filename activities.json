@@ -257,6 +257,19 @@
 
     {
         "type": "once",
+        "date": "2026-10-24",
+        "start": "10:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Axe Throwing in the Parlour. Ring bell if you need help. Activity ",
+        "text": "Axe Throwing in the Parlour"
+    },
+
+
+    {
+        "type": "once",
         "date": "2026-10-26",
         "start": "10:00",
         "lead": 10,
@@ -316,6 +329,31 @@
     },
 
     {
+        "type": "once",
+        "date": "2026-10-22",
+        "start": "15:00",
+        "lead": 5,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Test in the Library. Ring bell if you need help. Activity ",
+        "text": "Test in the Library"
+    },
+
+
+    {
+        "type": "once",
+        "date": "2026-10-30",
+        "start": "11:00",
+        "lead": 10,
+        "lag": 5,
+        "priority": "normal",
+        "catg": "activity",
+        "audioline": "Cheema, Go for Exercises in the Great Hall. Ring bell if you need help. Activity ",
+        "text": "Exercises in the Great Hall"
+    },
+
+    {
         "type": "weekly",
         "days": [4],
         "start": "18:00",
@@ -331,7 +369,7 @@
     {
         "type": "once",
         "date": "2026-10-30",
-        "start": "12:00",
+        "start": "14:00",
         "lead": 30,
         "lag": 30,
         "catg": "special",
