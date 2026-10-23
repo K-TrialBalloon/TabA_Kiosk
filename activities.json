@@ -330,8 +330,8 @@
 
     {
         "type": "once",
-        "date": "2026-10-22",
-        "start": "15:00",
+        "date": "2026-10-23",
+        "start": "17:35",
         "lead": 5,
         "lag": 5,
         "priority": "normal",
