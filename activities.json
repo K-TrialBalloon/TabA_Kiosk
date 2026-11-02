@@ -319,11 +319,11 @@
     {
         "type": "once",
         "date": "2026-11-02",
-        "start": "09:30",
+        "start": "09:40",
         "lead": 10,
         "lag": 2,
-        "catg": "routine",
-        "text": "This is a Dummy test event"
+        "catg": "special",
+        "page": "special/Happy_CurrentMonth.html"
     }
 
     
