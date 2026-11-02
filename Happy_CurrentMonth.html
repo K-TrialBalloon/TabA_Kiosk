@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy November!</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #24345e, #080d20 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, serif;
+    color: white;
+}
+
+h1 {
+    font-size: clamp(3rem, 9vw, 6rem);
+    text-align: center;
+    color: #ffe6a3;
+    text-shadow: 0 0 15px #ffbd59,
+                 0 0 35px #ff8c42;
+    animation: glow 2s ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #f5d9c0;
+    letter-spacing: 4px;
+}
+
+.container {
+    z-index: 2;
+    text-align: center;
+}
+
+canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ffbd59;
+    }
+    to {
+        text-shadow: 0 0 30px #ffbd59,
+                     0 0 60px #ff7043;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="fireworks"></canvas>
+
+<div class="container">
+    <h1>Happy November!</h1>
+    <div class="subtitle">✨ A MONTH FULL OF POSSIBILITIES ✨</div>
+</div>
+
+<script>
+const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+
+function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+window.addEventListener("resize", resize);
+resize();
+
+const colors = [
+    "#ffcf5c",
+    "#ff6b6b",
+    "#68e0cf",
+    "#c084fc",
+    "#ffffff",
+    "#ff9f43"
+];
+
+function createFirework(x, y) {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+
+    for (let i = 0; i < 65; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 4 + 1;
+
+        particles.push({
+            x,
+            y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            alpha: 1,
+            color,
+            size: Math.random() * 3 + 1
+        });
+    }
+}
+
+function animate() {
+    ctx.fillStyle = "rgba(8, 13, 32, 0.2)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach((p, index) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.025;
+        p.alpha -= 0.012;
+
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (p.alpha <= 0) {
+            particles.splice(index, 1);
+        }
+    });
+
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(animate);
+}
+
+function launchFirework() {
+    const x = Math.random() * canvas.width;
+    const y = Math.random() * canvas.height * 0.65;
+
+    createFirework(x, y);
+
+    setTimeout(launchFirework, Math.random() * 900 + 500);
+}
+
+animate();
+launchFirework();
+</script>
+
+</body>
+</html>
